@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stock Crickz Admin</title>
+    <link href="./vendor/nunito.css" rel="stylesheet">
+    <link rel="stylesheet" href="./styles/styles.css">
+    <link rel="stylesheet" href="./styles/loader.css">
+<style>
+table {
+  width:100%;
+}
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+th, td {
+  padding: 15px;
+  text-align: left;
+}
+#t01 tr:nth-child(even) {
+  background-color: #eee;
+}
+#t01 tr:nth-child(odd) {
+ background-color: #fff;
+}
+#t01 th {
+  background-color: black;
+  color: white;
+}
+</style>
+
+    
+</head>
+
+<body>
+        <div class="logout" id="logOut">Logout </div>
+    
+	<div style="display: flex;justify-content: center;font-size: x-large;color: white;margin-top: 10px;margin-bottom: 20px">User Details</div>
+    <div style="overflow-x: scroll;width:95%;height: 80%;margin: 30px">
+
+<div class="userDetails">
+    
+
+
+</div>
+
+
+    </div>
+
+<div style="display: flex;justify-content: space-between;background-color:black;padding: 30px;color: white;font-weight: 100px;font-size: x-large; margin: 30px">
+
+<div> Overall Result  </div> 
+
+<div id="teamAWin">CSK wins 10000</div>
+<div id="teamALoss">CSK loss 50000</div>
+<div id="teamBWin">RCB wins 200000</div>
+<div id="teamBLoss">RCB loss 10000</div>
+
+</div>
+
+
+   </body>
+
+<script src="./vendor/jquery.min.js"></script>
+
+<script>
+$(document).ready(function(){
+
+	
+
+    	 $.ajax({
+    	 	url: "./data/table.txt",
+            type:'POST',
+    contentType:'application/json',
+    dataType:'json',
+        	 	 success: function(result){
+   
+    $(".loader").hide();
+    var user=result.userDetails;
+    console.log(user);
+    
+var userCards=`<table id="t01">
+  <tr>
+    <th>S.No</th>
+    <th>Name</th>
+    <th>Match ID</th>
+    <th>Match Name</th>
+    <th>Current Bet</th>
+    <th>Total Amount</th> 
+    <th>Win</th>
+    <th>Loss</th>
+    
+
+  </tr>
+`;
+
+var count=1;
+
+
+user.forEach(val=>{
+userCards+=`<tr>
+
+
+<td>${count}</td>
+<td>${val.name}</td>
+<td>${val.matchID}</td>
+<td>${val.matchName}</td>
+<td>${val.amountinBal}</td>
+<td>${val.currentAmount}</td>
+<td>${val.Win}</td>
+<td>${val.Loss}</td>
+
+
+</tr>`;
+
+count++;
+}
+
+
+    );
+
+
+userCards+=`</table>`;
+$('.userDetails').html(userCards);
+  },
+  error:function(thrownError)
+  {
+
+    alert(thrownError);
+  }
+
+});
+
+
+//logout
+
+$('#logOut').click(function()
+{
+localStorage.setItem("name","");
+document.location="http://localhost/Livemat/index.html";
+});
+
+
+ 
+});
+</script>
+
+</html>

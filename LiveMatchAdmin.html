@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+ 
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Stock Crickz Admin</title>
+
+    <link href="./vendor/nunito.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="./styles/style.css">
+    <link rel="stylesheet" href="./styles/styles.css">
+
+  
+
+ 
+
+<style>
+
+ 
+
+div:hover
+
+{
+
+opacity: 1;
+
+}
+
+.matchBox{
+
+ 
+
+    background-color: white;
+
+    width: 60%;
+
+position: relative;
+
+    left: 20%;
+
+border-radius: 25px;
+
+opacity: 0.7;
+
+margin-botton:20px;
+
+ 
+
+}
+
+ 
+
+a:link, a:visited {
+
+  background-color: #f44336;
+
+  color: white;
+
+  padding: 14px 25px;
+
+  text-align: center;
+
+  text-decoration: none;
+
+  display: inline-block;
+
+border-radius: 10px;
+
+}
+
+a:hover, a:active {
+
+  background-color: grey;
+
+}
+
+</style>   
+
+ <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+</head>
+
+ 
+
+<body >
+
+ 
+    <div class="logout" id="logOut">Logout </div>
+    
+<div style="display:flex;justify-content:center;color:white;margin:50px;text-shadow: 1px 1px red;font-size: large;">Live matches</div>
+
+
+
+                <div class="matchBox" >
+
+
+     </div>
+
+
+
+ 
+
+               
+
+<script type="text/javascript">
+  
+$(document).ready(
+
+
+  function()
+  {
+var data;
+
+ $.ajax({
+
+
+    url:"http://criczz.us-east-2.elasticbeanstalk.com/criczz/adimin/matches",
+    type:'GET',
+    contentType:'application/json',
+    dataType:'json',
+    success:function(result){
+      data=result.data.matchdetails;
+let scoreCards =`<div class="heading">
+<div>S.NO</div>
+<div>League Name</div>
+
+<div>First Batting</div>
+<div>Second Batting</div>
+</div>
+
+`;
+var count=1;
+var temp="";
+var temp1="";
+
+//alert(temp);
+data.forEach(val=>
+{
+temp=val.matchId;//+"|"+val.teamAID;
+temp=temp+"|";
+temp=temp+val.teamAID;
+temp=temp+"|";
+
+temp1=val.matchId;//+"|"+val.teamBID;
+temp1=temp1+"|";
+temp1=temp1+val.teamBID;
+temp1=temp1+"|";
+
+scoreCards+= `
+
+<div class="title">
+<div class="lName">${count}</div>
+<div class="lName">${val.leageName}</div>
+<div>
+<a  href=./updated.html?id=${temp}">${val.firstBatting}</a>
+</div>
+
+<div>
+<a href="./SecondBatting - Copy.html?id=${temp1}">${val.secondBatting}</a>
+</div> 
+
+</div>
+
+
+
+`;
+//alert(count);
+count+=1;
+});
+
+
+$('.matchBox').html(scoreCards);
+
+
+},
+
+error:function(result,thrownErrorsxsr) {
+alert(thrownErrorsxsr);
+  // body...
+}
+  });
+
+//logout
+$('#logOut').click(function()
+{
+localStorage.setItem("name","");
+document.location="http://localhost/Livemat/index.html";
+});
+
+
+
+});
+</script>
+
+</body>
+
+ 
+
+</html>
+

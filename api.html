@@ -1,0 +1,26 @@
+<html>
+<script>
+var unirest = require("unirest");
+
+var req = unirest("GET", "https://dev132-cricket-live-scores-v1.p.rapidapi.com/scorecards.php");
+
+req.query({
+	"seriesid": "2141",
+	"matchid": "43431"
+});
+
+req.headers({
+	"x-rapidapi-host": "dev132-cricket-live-scores-v1.p.rapidapi.com",
+	"x-rapidapi-key": "088d4831fdmsh99f0d640616e1d0p18482bjsn53b553a1afb4",
+	"useQueryString": true
+});
+
+
+req.end(function (res) {
+	if (res.error) throw new Error(res.error);
+
+	console.log(res.body);
+});
+
+</script>
+</html>

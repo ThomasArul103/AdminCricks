@@ -1,0 +1,5 @@
+body {
+  background-color: black;
+  background-image: url("../assets/background.jpg");
+  font-family: "Nunito", sans-serif;
+}

@@ -1,0 +1,3976 @@
+<html lang="en"><head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Stock Crickz Admin</title>
+
+    <link href="./vendor/nunito.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="./styles/styles.css">
+
+    <link rel="stylesheet" href="./styles/loader.css">
+
+ 
+
+   
+
+</head>
+
+ 
+
+<body style="font-weight: bold;">
+
+ 
+
+           
+
+            <div style="display:flex;justify-content:flex-start">
+
+<div style="border-radius: 5px;background-color: #f2f2f2;width: 65%;/* height: 95%; */">
+
+<div style="display: flex;justify-content: space-around;">
+
+<h2 style="color:RED">First Batting</h2>
+
+<div style="display: flex;"><h2 style="color:RED">Match ID --></h2><h2 style="color:RED" id="matchID"></h2></div>
+
+ 
+
+</div>
+
+<hr>
+
+<div style="display: flex;justify-content: space-around;">
+
+<div id="teamADiv">
+
+<div id="teamAName" style="display: flex;flex-basis: calc(45%);font-size: 20px;margin:5px;color: blue;font-weight: bold;">
+
+</div>
+
+<div style="display: flex;justify-content: space-around;padding: 5px;margin-top: 8px;">
+
+<div id="batA" style="
+
+    display: flex;
+
+    flex-basis: calc(65%);
+
+">Rohit Sharma *</div>
+
+<select style="font-size: 17px;display: flex;flex-basis: calc(10%);" id="scoreA">
+
+    <option value="NA">NA</option>
+
+    <option value="0">0</option>
+
+    <option value="1">1</option>
+
+    <option value="2">2</option>
+
+   <option value="3">3</option>
+
+    <option value="4">4</option>
+
+    <option value="5">5</option>
+
+    <option value="6">6</option>
+
+    <option value="WK-C">WK-C</option>
+    <option value="WK-Lb">WK-LB</option>
+
+<option value="WK-Run">WK-Run</option>
+
+
+    <option value="WI-0">WI</option>
+
+    <option value="NB-0">NB</option>
+
+    <option value="WI-1">WI-1</option>
+
+    <option value="WI-2">WI-2</option>
+
+    <option value="WI-3">WI-3</option>
+
+    <option value="WI-4">WI-4</option>
+
+    <option value="NB-1">NB-1</option>
+
+    <option value="NB-2">NB-2</option>
+
+    <option value="NB-3">NB-3</option>
+
+    <option value="NB-4">NB-4</option>
+
+    <option value="NB-5">NB-5</option>
+
+    <option value="NB-6">NB-6</option>
+
+    <option value="LB-1">LB-1</option>
+
+    <option value="LB-2">LB-2</option>
+
+    <option value="LB-3">LB-3</option>
+
+    <option value="LB-4">LB-4</option>
+
+  </select>
+
+</div>
+
+<div style="display: flex;justify-content: flex-start;padding: 5px;margin-top: 8px;">
+
+<div id="batB" style="
+
+    display: flex;
+
+    flex-basis: calc(65%);
+
+">KL Rahul</div>
+
+<select style="font-size: 17px;display: flex;flex-basis: calc(10%);" id="scoreB">
+
+    <option value="NA">NA</option>
+
+    <option value="0">0</option>
+
+    <option value="1">1</option>
+
+    <option value="2">2</option>
+
+    <option value="3">3</option>
+
+    <option value="4">4</option>
+
+    <option value="5">5</option>
+
+    <option value="6">6</option>
+
+    <option value="WK-C">WK-C</option>
+    <option value="WK-Lb">WK-LB</option>
+
+<option value="WK-Run">WK-Run</option>
+
+    <option value="WI-0">WI</option>
+
+    <option value="NB-0">NB</option>
+
+    <option value="WI-1">WI-1</option>
+
+    <option value="WI-2">WI-2</option>
+
+    <option value="WI-3">WI-3</option>
+
+    <option value="WI-4">WI-4</option>
+
+    <option value="NB-1">NB-1</option>
+
+    <option value="NB-2">NB-2</option>
+
+    <option value="NB-3">NB-3</option>
+
+    <option value="NB-4">NB-4</option>
+
+    <option value="NB-5">NB-5</option>
+
+    <option value="NB-6">NB-6</option>
+
+    <option value="LB-1">LB-1</option>
+
+    <option value="LB-2">LB-2</option>
+
+    <option value="LB-3">LB-3</option>
+
+    <option value="LB-4">LB-4</option>
+
+ 
+
+   
+
+  </select>
+
+ 
+
+</div>
+
+ 
+
+<div style="display: flex;justify-content: center;margin: 10px;">
+
+            <button value="Submit" id="teamASubmit">Submit</button>
+
+</div><hr style="">
+
+ 
+
+<div style="margin: 12px;color: blue;font-size:20px;font-weight: bold;">
+
+            Batsmen Score
+
+</div>
+
+ 
+
+<div style="display: flex;justify-content: space-around;">
+
+<div id="" style="margin-bottom: : 4px;text-decoration: underline;font-weight: bold;display: flex;flex-basis: calc(40%);">Name
+
+</div>
+
+<div id="" style="margin-bottom: : 4px;text-decoration: underline;font-weight: bold;display: flex;flex-basis: calc(10%);">R
+
+</div>
+
+<div id="" style="margin-bottom: : 4px;text-decoration: underline;font-weight: bold;display: flex;flex-basis: calc(10%);">B
+
+</div>
+
+    <div id="" style="margin-bottom: : 4px;text-decoration: underline;font-weight: bold;display: flex;flex-basis: calc(10%);">SR
+
+</div>
+
+</div>
+
+ 
+
+ 
+
+ 
+
+<div style="display: flex;justify-content: space-around;margin-top: 5px;">
+
+<div id="batAName" style="
+
+    display: flex;
+
+    flex-basis: calc(40%);
+
+">Rohit Sharma *</div>
+
+<div id="batAScore" style="
+
+    display: flex;
+
+    flex-basis: calc(10%);
+
+">0</div>
+
+<div id="batABalls" style="
+
+    display: flex;
+
+    flex-basis: calc(10%);
+
+">0</div>
+
+    <div id="batAStrike" style="
+
+    display: flex;
+
+    flex-basis: calc(10%);
+
+">0</div>
+
+ 
+
+</div>
+
+ 
+
+<div style="display: flex;justify-content: space-around;margin-top: 8px;">
+
+<div id="batBName" style="
+
+    display: flex;
+
+    flex-basis: calc(40%);
+
+">KL Rahul</div>
+
+<div id="batBScore" style="
+
+    display: flex;
+
+    flex-basis: calc(10%);
+
+">0</div>
+
+<div id="batBBalls" style="
+
+    display: flex;
+
+    flex-basis: calc(10%);
+
+">0</div>
+
+    <div id="batBStrike" style="
+
+    display: flex;
+
+    flex-basis: calc(10%);
+
+">0</div>
+
+</div>
+
+<hr><div style="display: flex;justify-content: space-around;font-size: 16px;">
+
+            <div style="margin:5px;color: blue;font-size: 19px;">Partnership   
+
+            </div>
+
+            <div style="margin-top: 5px">-</div>
+
+            <div id="partnership" style="margin-top: 5px"></div>
+
+</div>
+
+<hr>
+
+<div style="margin: 12px;color: blue;font-size:20px;font-weight: bold;">
+
+            Score Board
+
+</div>
+
+ 
+
+<div style="display: flex;justify-content: space-around;font-size: 19;">
+
+<div style="display: flex;justify-content: space-around;">
+
+<div style="margin:8px;color: blue;font-size:15px;font-weight: bold;">Runs
+
+</div>
+
+<div id="totalRuns" style="margin-top: 7px">0</div>
+
+</div>
+
+ 
+
+<div style="display: flex;justify-content: space-around;">
+
+<div id="" style="margin:8px;color: blue;font-size:15px;font-weight: bold;">Wickets
+
+</div>
+
+<div id="totalWK" style="margin-top: 7px">0</div>
+
+</div>
+
+ 
+
+<div style="display: flex;justify-content: space-around;">
+
+<div id="" style="margin:8px;color: blue;font-size:15px;font-weight: bold;">Overs
+
+</div>
+
+<div id="totalOver" style="margin-top: 7px">0</div>
+
+</div>
+
+</div>
+
+<hr>
+
+ <div style="display: flex;justify-content: space-between;margin: 10px">
+    <div style="width:80px;word-break: break-all;color: blue">Ball Status</div>
+<div  id="ballStatus" style="width:150px;overflow-x: scroll;overflow-y: scroll;word-break: break-all;"></div>
+</div>
+
+</div>
+
+<div class="vl" style="border-left: 2px solid grey;/* display: flex; *//* flex-basis: calc(10px); */"></div>
+
+<div id="teamBDiv">
+
+<div id="teamBName" style="display: flex;flex-basis: calc(45%);align-content: center;font-size: 20px;margin:5px;color: blue;">
+
+ 
+
+            </div>
+
+ 
+
+<div style="display: flex;justify-content: space-around;<div style=&quot;margin: 12px;color: blue;font-size:20px;font-weight: bold;&quot;>
+
+Batsmen Score
+
+</div>;">
+
+            <label style="/* margin:5px; */">Selection</label>
+
+<select style="font-size: 15px;margin:8px;" id="bowlerB">
+
+<option value="NA">NA</option>   
+
+ 
+
+   
+
+  </select>
+
+<button id="bowerBSubmit" style="margin:8px">Submit</button>
+
+ 
+
+</div>
+
+<hr>
+
+ 
+
+ 
+
+<div style="display: flex;justify-content: space-around;font-size: 20px;">
+
+            <div style="margin:5px;color: blue;">Selected Bowler   
+
+            </div>
+
+            <div style="margin-top: 5px">-</div>
+
+            <div id="bowName" style="margin-top: 5px"></div>
+
+</div>
+
+<hr>
+
+ 
+
+<div style="display: flex;justify-content: space-around;margin: 10px;">
+
+    <div style="
+
+    color: blue;
+
+">Current Run Rate</div>
+
+    <div id="CRR"></div>
+
+   
+
+</div>
+
+ 
+
+ 
+
+<hr>
+
+ 
+
+ 
+
+<div style="padding: 10px;font-size: 18px;margin:5px;color: blue;">
+
+            Current Over Details
+
+</div>
+
+ 
+
+<div style="display: flex;justify-content: space-around;">
+
+            <div style="margin:5px;color: blue;"> Balls   
+
+            </div>
+
+            <div style="margin-top: 5px">:</div>
+
+            <div style="margin-top: 5px" id="curOver">0.0</div>
+
+</div>
+
+<hr>
+
+ 
+
+ 
+
+ 
+
+<div style="display: flex;justify-content: space-around;margin: 10px;">
+
+            <div style="color: blue;">This Over    
+
+            </div>
+
+                        <div id="overDetails" style="display:flex;flex-basis: calc(75%);word-break: break-all;font-size: 13px;overflow: scroll;height: 60px;width: 75px;padding: 2px"></div>
+
+</div><div style="display: flex;justify-content: space-around;margin: 10px;">
+
+            <div style="color: blue;">Last Over  
+
+            </div>
+
+                        <div id="LastOverDetails" style="display:flex;flex-basis: calc(75%);word-break: break-all;font-size: 13px;overflow: scroll;height: 60px;width: 75px;padding: 2px"></div>
+
+</div>
+
+<hr>
+
+ 
+
+<div style="display: flex;justify-content: space-around;margin: 10px;">
+
+            <div style="color: blue;">Extra's -    
+
+            </div>
+
+<div id="extras"></div>
+
+                        <div id="totalextras" style="display:flex;flex-basis: calc(50%);word-break: break-all;"></div>
+
+</div>
+
+<hr>
+
+ <div style="display: flex;justify-content: space-around;margin: 10px;">
+
+            <div style="color: blue;">Get From DB   
+
+            </div>
+
+<div ><button id="retButton">Submit</button></div>
+</div>
+<hr>
+</div>
+
+</div>
+
+ 
+
+            </div>
+
+   <!--   Back And Lay -->
+
+    
+    <div style="border-radius: 5px;background-color: #f2f2f2;width: 33%;margin-left: 20px;height: auto;">
+
+<div id="" style="text-align: center;font-size: 120%;margin-top: 10px">Back And Lay </div>
+        
+<div id="teamABackName" style="text-align: center;;margin-top: 10px">Team A </div>
+
+<div style="display: flex;justify-content: space-around;;margin-top: 10px">
+    <div  style="display: flex;flex-basis: calc(17%);color: blue;justify-content: center;">Fav Team</div>
+ <div  style="display: flex;flex-basis: calc(17%);color: blue;justify-content: center">RXB Team</div>
+ <div  style="display: flex;flex-basis: calc(20%);color: blue;justify-content: center">Point-A</div>
+ <div  style="display: flex;flex-basis: calc(20%);color: blue;justify-content: center">Point-B</div>
+ <div  style="display: flex;flex-basis: calc(15%);color: blue;justify-content: center">Overs-A</div>
+
+
+</div>
+<div style="display: flex;justify-content: space-around;;margin-top: 10px">
+    <input id="fTeam" type="text" style="display: flex;flex-basis: calc(17%);color: black;height: 10px;width: 30px"></input>
+ <input id="rXBTeam" type="text" style="display: flex;flex-basis: calc(17%);color: black;height: 10px;width: 30px"></input>
+ <input id="point-A" type="text" style="display: flex;flex-basis: calc(17%);color: black;height: 10px;width: 30px"></input>
+ <input id="point-B" type="text" style="display: flex;flex-basis: calc(17%);color: black;height: 10px;width: 30px"></input>
+ 
+<input id="overs-A" type="text" style="display: flex;flex-basis: calc(17%);color: black;height: 10px;width: 30px"></input>
+ 
+</div>
+<div style="display: flex;justify-content: space-around;;margin-top: 10px">
+    <div id="FavTeam" style="display: flex;flex-basis: calc(17%);color: black;justify-content: center;"></div>
+ <div  id="RXBTeam" style="display: flex;flex-basis: calc(17%);color: black;justify-content: center"></div>
+ <div id="Point-A" style="display: flex;flex-basis: calc(20%);color: black;justify-content: center"></div>
+ <div id="Point-B" style="display: flex;flex-basis: calc(20%);color: black;justify-content: center"></div>
+<div id="Overs-A" style="display: flex;flex-basis: calc(15%);color: black;justify-content: center"></div>
+
+
+</div>
+
+
+
+
+<div style="display: flex;justify-content: space-around;;margin-top: 10px">
+    <div  style="display: flex;flex-basis: calc(17%);color: blue;justify-content: center;">Overs-B</div>
+ <div  style="display: flex;flex-basis: calc(17%);color: blue;justify-content: center">RXB-A</div>
+ <div  style="display: flex;flex-basis: calc(20%);color: blue;justify-content: center">RXB-B</div>
+ <div  style="display: flex;flex-basis: calc(20%);color: blue;justify-content: center">Back</div>
+<div  style="display: flex;flex-basis: calc(15%);color: blue;justify-content: center">Lay</div>
+
+
+</div>
+<div style="display: flex;justify-content: space-around;;margin-top: 10px">
+    <input id="overs-B" type="text" style="display: flex;flex-basis: calc(17%);color: black;height: 10px;width: 30px"></input>
+ <input id="rXB-A" type="text" style="display: flex;flex-basis: calc(17%);color: black;height: 10px;width: 30px"></input>
+ <input id="rXB-B" type="text" style="display: flex;flex-basis: calc(17%);color: black;height: 10px;width: 30px"></input>
+ <input id="back" type="text" style="display: flex;flex-basis: calc(17%);color: black;height: 10px;width: 30px"></input>
+ <input id="lay" type="text" style="display: flex;flex-basis: calc(17%);color: black;height: 10px;width: 30px"></input>
+ 
+
+
+</div>
+<div style="display: flex;justify-content: space-around;;margin-top: 10px">
+    <div id="Overs-B" style="display: flex;flex-basis: calc(17%);color: black;justify-content: center;"></div>
+ <div id="RXB-A" style="display: flex;flex-basis: calc(17%);color: black;justify-content: center"></div>
+ <div id="RXB-B" style="display: flex;flex-basis: calc(20%);color: black;justify-content: center"></div>
+ <div id="Back" style="display: flex;flex-basis: calc(20%);color: black;justify-content: center"></div>
+<div id="Lay" style="display: flex;flex-basis: calc(15%);color: black;justify-content: center"></div>
+
+
+</div>
+
+<div style="display: flex;justify-content: flex-start;margin-top: 10px;margin-bottom: 25px">
+<button id="teamBBLSubmit" style="position: absolute;right: 338px;">Submit</button>
+</div>
+<hr>
+<!--   Back And Lay End-->
+
+<!--   Back And Lay End-->
+
+
+<!-- Bowlng Details-->
+
+<div style="color: blue;margin: 5px">Bowling Details</div>
+<div  style="overflow-y:scroll;overflow-x: scroll;height: 150px ">
+<div style="display: flex;justify-content: space-around;margin:5px;">
+    <div style="text-decoration: underline;flex-basis: calc(40%);word-wrap: break-word;padding: 3px">Name    </div>
+    
+    <div style="text-decoration: underline;flex-basis: calc(10%);padding: 3px">O    
+    </div>
+    <div style="text-decoration: underline;flex-basis: calc(10%);padding: 3px">M</div>
+    <div style="text-decoration: underline;flex-basis: calc(10%);padding: 3px">R
+    </div>
+    <div style="text-decoration: underline;flex-basis: calc(10%);padding: 3px">WK
+    </div>
+    <div style="text-decoration: underline;flex-basis: calc(10%);padding: 3px">ER
+    </div>
+</div>
+<div class="bowlWrapper" >
+</div>
+
+</div>
+<hr>
+<!--Batting Details-->
+
+<div style="color: blue;margin-top:15px;margin-bottom: 15px">Batting Details</div>
+<div  style="overflow-y:scroll;overflow-x: scroll;height: 200px ">
+<div style="display: flex;justify-content: space-around;margin:5px;">
+    <div style="text-decoration: underline;flex-basis: calc(20%);word-wrap: break-word;padding: 3px">Name    </div>
+    
+    <div style="text-decoration: underline;flex-basis: calc(10%);padding: 3px">R</div>
+    <div style="text-decoration: underline;flex-basis: calc(10%);padding: 3px">B
+    </div>
+    <div style="text-decoration: underline;flex-basis: calc(10%);padding: 3px">SR
+    </div>
+    <div style="text-decoration: underline;flex-basis: calc(10%);padding: 3px">4's
+    </div>
+    <div style="text-decoration: underline;flex-basis: calc(10%);padding: 3px">6's
+    </div>
+    <div style="text-decoration: underline;flex-basis: calc(20%);padding: 3px;word-wrap: break-word;padding: 3px">Bowl</div>
+    
+    <div style="text-decoration: underline;flex-basis: calc(20%);padding: 3px;word-wrap: break-word;padding: 3px">Catch    
+    </div>
+    
+</div>
+<div class="batWrapper">
+</div>
+
+</div>
+
+
+
+
+
+    </div>
+
+    
+
+</div>
+
+ 
+
+ 
+
+ 
+
+<div style="
+
+    display: flex;
+
+    flex-basis: calc(60%);
+
+">
+
+<div style="border-radius: 5px;background-color: #f2f2f2;padding: 20px;margin-top:10px;width: 380px;height: 70px;">
+
+           
+
+            <div style="display: flex;justify-content: space-between;">
+
+            <div style="color: blue;display:flex;flex-basis: calc(30%);">Wickets (R,W,O)    
+
+            </div>
+
+                        <div id="wkDetailsA" style="display:flex;flex-basis: calc(70%);word-break: break-all;overflow: scroll;height: 70px"></div>
+
+ 
+
+</div>
+
+</div>
+
+    <div style="border-radius: 5px;background-color: #f2f2f2;padding: 20px;margin-top:10px;margin-left: 10px;width: 380px;height: 70px;">
+
+           
+
+            <div style="display: flex;justify-content: space-between;">
+
+            <div style="color: blue;">Wickets    
+
+            </div>
+
+                        <div id="wkDetailsName" style="display:flex;flex-basis: calc(80%);word-break: break-all;overflow: scroll;height: 80px;"></div>
+
+ 
+
+</div>
+
+</div>
+
+    </div>        
+
+ 
+
+ 
+
+ 
+
+ 
+
+<!--  new-->
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+<!-- Javascript-->
+
+<script src="./vendor/jquery.min.js"></script>
+
+<script>
+
+//First Batting
+
+ 
+
+$(document).ready(function()
+
+  {
+
+let str = window.location.href;
+    let ID = str.substr(str.lastIndexOf("=")+1,str.lastIndexOf("|"));
+    //alert(ID);
+var idsplit=ID.split("|");
+    //alert(idsplit[0]+" "+idsplit[1]);
+
+
+
+var teamBName,teamAName,lastWK;
+ 
+
+//var bowValues = ["Shami", "Irfan Pathan", "Sabari", "Logesh"];
+
+//var batValues = ["Rohit Sharma", "KL Rahul", "Raina", "Rayudu","Jadav","MS Dhoni","R Jadeja","R Ashwin","M Shami","A Nehra","J Bumrah"];
+
+var bowValues=[];
+var batValues=[];
+
+ var catchValues=bowValues;
+ //alert(catchValues);
+
+var batSelect=1;
+
+var matchID = "";   
+
+var totalRuns=0;
+
+var wickets=0;
+
+var overs=0;
+
+var oversString="";
+
+var batA=0;
+
+var batB=0;
+
+var batABall=0;
+
+var batBBall=0;
+
+var ballsOver=0;
+
+var batAString="";
+
+var batBString="";
+
+var overDetails="";
+
+var noBall=0;
+
+var wide=0;
+
+var lb=0;
+
+var batASplit="";
+
+var batBSplit="";
+
+var extraTotal=0;
+
+var wkDetailsA="";
+
+var bowlerB="NA";
+
+var batASR=0,batBSR=0;
+
+var partnershipRuns=0;
+
+var partnershipBalls=0;
+
+var partnership="";
+
+var wkDetailsName="";
+//var wkDetailsName="";
+
+var wkDetailsNameSplit={};
+
+
+var battingAname;
+
+var battingBname;
+
+var cRR=0;
+
+var temp="";
+
+var totalExtras=["W","N","LB"];
+
+var balls=[];
+
+var batA4=0,batA6=0,batB4=0,batB6=0;
+
+var ballsCount=0;
+var eRate=0;
+
+var i=0; let bowls='';
+
+var check=0;
+var bSp,bLorR,bOver,bMaiden,bRun,bAverage,bWK;
+var speed,LorR,Over=0,Maiden=0,Run=0,Average=0,Wicket=0;
+
+var batArray=[];
+var bowlArray=[];
+var currentABatvar, currentBBat,matchidr,battingTname,bowlingTname,jsonData;
+var myObj,ballStatus;
+
+jsonData={
+
+"matchID":idsplit[0],"teamID":idsplit[1]
+
+}
+
+//document.write(JSON.stringify(jsonData));
+//var one=idsplit[0];
+//one=1;
+ $.ajax({
+
+
+    url:"http://criczz.us-east-2.elasticbeanstalk.com/criczz/get/"+idsplit[0]+"/team/"+idsplit[1],
+    type:'GET',
+    contentType:'application/json',
+    dataType:'json',
+   // data:JSON.stringify(jsonData),
+    success:function(resultCame){
+       // console.log(result.data.matchId);
+var result=resultCame;
+console.log(result.data.matchId);
+matchID=result.data.matchId;
+bowValues=result.data.bowlArray;
+batValues=result.data.batArray;
+catchValues=result.data.catchArray;
+battingAname=batValues[0];
+battingBname=batValues[1];
+teamAName=result.data.battingTname,teamBName=result.data.bowlingTname;
+document.getElementById("matchID").innerHTML=matchID;
+document.getElementById("teamAName").innerHTML="Batting--> "+teamAName;
+document.getElementById("teamBName").innerHTML="Bowling--> "+teamBName;
+
+
+
+// Bowler Select dynamic
+
+
+
+//bowler assign
+
+
+bowValues.forEach(val => {
+            
+//bSp=val+"sp";
+//bLorR=val+"lorR";
+bOver=val+"o";
+bMaiden=val+"m";
+bRun=val+"run";
+bAverage=val+"avg";
+bWK=val+"wk";
+
+
+//alert(" SP "+bSp+" Lor "+bLorR+" over "+bOver+" M "+bMaiden+" R "+bRun+" Avg "+bAverage+" WK "+bWK);
+
+      $('#bowlerB').append($(document.createElement('option')).prop({
+
+        value: val,
+
+        text: val
+
+      }))
+
+ bowls += `
+ <div class="bowl">
+            <div id="${val}"class="bowlingName">${val}</div>
+            <div id="${bOver}" class="bowlingScore">0</div>
+           <div id="${bMaiden}" class="bowlingScore">0</div>
+           <div id="${bRun}" class="bowlingScore">0</div>
+           <div id="${bWK}" class="bowlingScore">0</div>
+           <div id="${bAverage}" class="bowlingScore">0</div>
+           
+
+</div>`
+            
+            });
+
+        $('.bowlWrapper').html(bowls);
+
+
+//bowler assign end
+ 
+//batsman assign
+bowls="";i=0;
+batValues.forEach(val => {
+
+bSp=val+"ball";
+bLorR=val+"SR";
+bOver=val+"4";
+bMaiden=val+"6";
+bRun=val+"run";
+bAverage=val+"bowl";
+bWK=val+"C";
+            if(i<2)
+            {
+                temp=val+" (Not Out)";
+                temp=val;
+bowls += `
+ <div class="bowl">
+            <div id="${val}" class="batName">${temp}</div>
+            <div id="${bRun}" class="bowlingScore">0</div>
+            <div id="${bSp}" class="bowlingScore">0</div>
+            <div id="${bLorR}" class="bowlingScore">0</div>
+           <div id="${bOver}" class="bowlingScore">0</div>
+           <div id="${bMaiden}" class="bowlingScore">0</div>
+           <div id="${bAverage}" class="batName">-</div>
+           <div id="${bWK}" class="batName">-</div>
+
+</div>`
+ 
+            }
+            else
+            {
+
+bowls += `
+ <div class="bowl">
+            <div id="${val}" class="batName">${val}</div>
+            <div id="${bRun}" class="bowlingScore">0</div>
+            <div id="${bSp}" class="bowlingScore">0</div>
+            <div id="${bLorR}" class="bowlingScore">0</div>
+           <div id="${bOver}" class="bowlingScore">0</div>
+           <div id="${bMaiden}" class="bowlingScore">0</div>
+           <div id="${bAverage}" class="batName">-</div>
+           <div id="${bWK}" class="batName">-</div>
+
+</div>`
+ 
+            }
+            i+=1;
+
+
+
+//alert(" SP "+bSp+" Lor "+bLorR+" over "+bOver+" M "+bMaiden+" R "+bRun+" Avg "+bAverage+" WK "+bWK);
+
+            
+            });
+
+        $('.batWrapper').html(bowls);
+
+
+//batsman assign end
+
+ 
+
+//Bat Opening
+
+ 
+
+document.getElementById("batA").innerHTML=battingAname+" *";
+
+document.getElementById("batAName").innerHTML=battingAname+" *";
+
+document.getElementById("batB").innerHTML=battingBname;
+
+document.getElementById("batBName").innerHTML=battingBname;
+
+ 
+
+ 
+
+$("#teamASubmit").click(function()
+
+  {
+
+if(overs==1||wickets==10)
+{
+ballStatus=teamBName+" needs "+(totalRuns+1)+" runs from 10 overs";
+document.getElementById("ballStatus").innerHTML=ballStatus;
+alert("First Batting Over");
+temp=String(overs)+"."+String(ballsOver);
+var returnBowl=[];
+var returnBat=[];
+bowValues.forEach(val=>{
+returnBowl.push(document.getElementById(val).innerHTML,document.getElementById(val+"wk").innerHTML);
+
+}
+
+    );
+
+
+
+batValues.forEach(val=>{
+returnBat.push(document.getElementById(val).innerHTML,document.getElementById(val+"run").innerHTML);
+
+});
+
+//document.write(JSON.stringify(returnBowl));
+
+
+jsonData={
+
+
+    "matchId":matchID,
+    "batting":"First Batting",
+    "overs":overs,
+    "ballsOver":ballsOver,
+    "totalRuns":totalRuns,
+    "wickets":wickets,
+    "ballStatus":ballStatus,
+"returnBowl":returnBowl,
+"returnBat":returnBat,
+"match_status":"OVER"
+};
+console.log("Before sending "+JSON.stringify(jsonData));
+
+
+$.ajax({
+
+
+    url:"http://criczz.us-east-2.elasticbeanstalk.com/criczz/save-match-info",
+    type:'POST',
+    contentType:'application/json',
+    dataType:'json',
+    data:JSON.stringify(jsonData),
+    success:function(result){
+    console.log(result);
+
+    },
+    error:function (result,thrownError) {
+        // body...
+        alert("Final Submit "+thrownError);
+    }
+});
+
+
+
+
+
+} 
+else
+{
+batASplit=$("#scoreA").val();
+
+batBSplit=$("#scoreB").val();
+ 
+if((batASplit!="NA"&&batBSplit!="NA")||(batASplit=="NA"&&batBSplit=="NA"))
+{
+    alert("Both Runs are selected Else Both runs not Selected");
+}
+ 
+
+ 
+
+if(bowlerB=="NA")
+
+{
+
+ 
+
+alert("Select the BOWLER" );
+
+}
+else if(batSelect==11)
+{
+alert("ALL Out" );
+
+}
+
+else
+
+{
+
+
+//wkDetailsName=$("#batA").val();
+
+//alert("b4 "+batASplit);
+
+batAString=batASplit.split("-");
+
+batBString=batBSplit.split("-");
+
+//alert(batAString[0]+batBString[0]);
+
+ 
+
+// Run calculation Team A batsman A
+
+if(batBString=="NA"&&bowlerB!="NA")
+
+{
+
+ 
+
+//alert("Batsman A Valc");
+
+ 
+
+ 
+
+ 
+
+if(batAString[0]=="NA")
+
+{
+
+}
+
+ 
+
+else if(batAString[0]=="WK")
+
+{
+
+//alert("in WK");
+
+if(batAString[1]=="C")
+{
+//alert(batValues[Math.floor((Math.random() * batValues.length) + 1)]);
+temp=catchValues[Math.floor((Math.random() * catchValues.length) )];
+
+document.getElementById(battingAname+"C").innerHTML=temp+"(c)";
+document.getElementById(battingAname+"bowl").innerHTML=bowlerB+"(b)";
+ballStatus=battingAname+" out, caught by "+String(document.getElementById(battingAname+"C").innerHTML);
+document.getElementById("ballStatus").innerHTML=ballStatus;
+//alert(ballStatus);
+}
+else if(batAString[1]=="Run")
+{
+//alert(batValues[Math.floor((Math.random() * batValues.length) + 1)]);
+temp=catchValues[Math.floor((Math.random() * catchValues.length) )];
+document.getElementById(battingAname+"C").innerHTML=temp+"(Ro)";
+//document.getElementById(battingBname+"bowl").innerHTML=bowlerB;
+ballStatus=battingAname+" out, run out by "+temp;
+document.getElementById("ballStatus").innerHTML=ballStatus;
+
+//alert(ballStatus);
+
+}
+else
+{
+document.getElementById(battingAname+"bowl").innerHTML=bowlerB+"(Lbw)";
+ballStatus="Wicket Lbw, "+battingAname+" gone";
+document.getElementById("ballStatus").innerHTML=ballStatus;
+
+
+//alert(ballStatus);
+
+
+}
+ 
+
+//alert(ballsCount);
+
+if(ballsCount==12)
+
+{
+
+ 
+
+balls=balls.slice(1);
+
+balls[ballsCount]=" "+batASplit;
+
+ 
+
+}
+
+
+
+else
+
+{
+
+balls[ballsCount]=" "+batASplit;
+
+ballsCount=ballsCount+1;
+
+}
+
+document.getElementById("LastOverDetails").innerHTML=balls;
+
+ 
+
+ 
+
+//alert("Batsman A WK");
+
+ballsOver=ballsOver+1;
+
+ 
+
+//CRR calc
+
+cRR=(totalRuns*6)/((overs*6)+ballsOver);
+
+document.getElementById("CRR").innerHTML=cRR.toPrecision(3);
+
+ 
+
+partnershipRuns=0;
+
+partnershipBalls=0;
+
+wickets=wickets+1;
+
+if(overDetails=="")
+
+{
+
+overDetails=batAString[0];
+
+ 
+
+}
+
+else
+
+{
+
+overDetails=overDetails+", WK ";
+
+ 
+
+}
+
+//alert(document.getElementById("batA").innerHTML);
+
+if(wkDetailsName=="")
+
+{
+
+ 
+
+//wkDetailsName=document.getElementById("batA").innerHTML;
+
+wkDetailsName=battingAname;
+document.getElementById("wkDetailsName").innerHTML=battingAname;
+
+//alert(wkDetailsName);
+
+}
+
+else
+
+{
+
+wkDetailsName=wkDetailsName+", "+battingAname;
+
+document.getElementById("wkDetailsName").innerHTML=wkDetailsName;
+
+//alert(wkDetailsName);
+
+}
+
+ 
+
+ 
+
+ 
+
+if(wkDetailsA=="")
+
+{
+
+wkDetailsA=String(totalRuns)+"-"+String(wickets)+"-"+String(overs)+"."+String(ballsOver);
+
+ 
+
+ 
+
+}
+
+else
+
+{
+
+//wkDetailsA=String(totalRuns)+"-"+String(wickets);
+
+wkDetailsA=wkDetailsA+", "+String(totalRuns)+"-"+String(wickets)+"-"+String(overs)+"."+String(ballsOver);
+
+}
+
+ 
+
+document.getElementById("totalWK").innerHTML=wickets;
+
+document.getElementById("totalOver").innerHTML=String(overs)+"."+String(ballsOver);
+
+//document.getElementById("curOver").innerHTML="0"+"."+String(ballsOver);
+
+document.getElementById("overDetails").innerHTML=overDetails;
+
+document.getElementById("wkDetailsA").innerHTML=wkDetailsA;
+
+ 
+
+partnership=String(partnershipRuns)+" ("+String(partnershipBalls)+")";
+
+ 
+
+
+if(wickets==10)
+{
+
+}
+else
+{
+batSelect=batSelect+1;
+}
+batABall=batABall+1;
+
+batASR=(batA/batABall)*100;
+document.getElementById(battingAname+"ball").innerHTML=batABall;
+
+document.getElementById(battingAname+"SR").innerHTML=batASR.toPrecision(3);
+lastWK="Last wkt : "+String(battingAname)+" "+String(batA)+"("+String(batABall)+")";
+//alert(lastWK);
+document.getElementById(battingAname).innerHTML=battingAname;
+
+battingAname=batValues[batSelect];
+
+//document.getElementById(battingAname).innerHTML=battingAname+" (Not Out)";
+document.getElementById(battingAname).innerHTML=battingAname;
+
+if(ballsOver==6)
+
+{
+
+ 
+
+document.getElementById("batAName").innerHTML=battingAname;
+
+document.getElementById("batA").innerHTML=battingAname;
+
+document.getElementById("batBName").innerHTML=battingBname+" *";
+
+document.getElementById("batB").innerHTML=battingBname+" *";
+
+}
+
+else
+
+{
+
+document.getElementById("batAName").innerHTML=battingAname+" *";
+
+document.getElementById("batA").innerHTML=battingAname+" *";
+
+}
+
+ 
+
+ 
+
+ 
+
+ 
+
+if(ballsOver==6)
+
+{
+
+ballsOver=0;
+
+overs=overs+1;
+
+
+document.getElementById("bowName").innerHTML="NA";
+bOver=bOver+1;
+document.getElementById(bowlerB+"avg").innerHTML=parseFloat((Run/(bOver))).toPrecision(3);
+
+document.getElementById(bowlerB+"o").innerHTML=bOver;
+bWK=bWK+1;
+document.getElementById(bowlerB+"wk").innerHTML=bWK;
+
+bowlerB="NA";
+
+overDetails="";
+
+//document.getElementById("overDetails").innerHTML="";
+
+}
+else
+{
+bWK=bWK+1;
+document.getElementById(bowlerB+"wk").innerHTML=bWK;
+document.getElementById(bowlerB+"o").innerHTML=String(bOver)+"."+String(ballsOver);
+document.getElementById(bowlerB+"avg").innerHTML=parseFloat((Run/(bOver+"."+ballsOver))).toPrecision(3);
+
+}
+
+document.getElementById("curOver").innerHTML="0"+"."+String(ballsOver);
+
+document.getElementById("totalOver").innerHTML=String(overs)+"."+String(ballsOver);
+
+
+document.getElementById("partnership").innerHTML=partnership;
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+//batSelect=batSelect+1;
+
+
+
+
+
+
+
+batA=0;
+
+batABall=0;
+
+batASR=0;
+batA4=0;
+batA6=0;
+
+
+document.getElementById("batABalls").innerHTML=batABall;
+
+document.getElementById("batAScore").innerHTML=batA;
+
+document.getElementById("batAStrike").innerHTML=batASR;
+
+ 
+
+}
+
+ 
+
+else if(batAString[0]=="WI")
+
+{
+if(ballsCount==12)
+
+{
+
+ 
+
+balls=balls.slice(1);
+
+balls[ballsCount]=" "+batASplit;
+
+ 
+
+}
+
+
+
+else
+
+{
+
+balls[ballsCount]=" "+batASplit;
+
+ballsCount=ballsCount+1;
+
+}
+
+document.getElementById("LastOverDetails").innerHTML=balls;
+ 
+
+ 
+if(batAString[1]==0)
+{
+    // alert(batAString);
+ballStatus="Wide";
+//alert(ballStatus);
+document.getElementById("ballStatus").innerHTML=ballStatus;
+
+}
+else
+{
+ballStatus="Wide plus "+String(batAString[1])+" runs";
+//alert(ballStatus);
+document.getElementById("ballStatus").innerHTML=ballStatus;
+
+}
+
+
+ 
+
+ 
+
+ 
+
+if(parseInt(batAString[1])==1||parseInt(batAString[1])==3)
+
+{
+
+document.getElementById("batA").innerHTML=battingAname;
+
+document.getElementById("batAName").innerHTML=battingAname;
+
+document.getElementById("batB").innerHTML=battingBname+" *";
+
+document.getElementById("batBName").innerHTML=battingBname+" *";
+
+ 
+
+ 
+
+}
+
+ 
+
+ 
+
+if(overDetails=="")
+
+{
+
+overDetails=batASplit;
+
+ 
+
+}
+
+else
+
+{
+
+overDetails=overDetails+", "+batASplit+" ";
+
+ 
+
+}
+
+ 
+
+//alert(batAString+" "+overDetails);
+
+ 
+
+extraTotal=extraTotal+1+parseInt(batAString[1]);
+
+wide=wide+1;
+
+totalExtras[0]=String(wide)+"W";
+
+//alert(totalExtras);
+
+totalRuns=totalRuns+1+parseInt(batAString[1]);
+
+//CRR calc
+if(overs==0&&ballsOver==0)
+{
+cRR="-";
+document.getElementById("CRR").innerHTML="-";
+} 
+else
+{
+cRR=(totalRuns*6)/((overs*6)+ballsOver);
+
+document.getElementById("CRR").innerHTML=cRR.toPrecision(3);
+}
+ 
+
+partnershipRuns=partnershipRuns+parseInt(batAString[1])+1;
+
+partnership=String(partnershipRuns)+" ("+String(partnershipBalls)+")";
+
+document.getElementById("overDetails").innerHTML=overDetails;
+
+document.getElementById("totalRuns").innerHTML=totalRuns;
+
+document.getElementById("extras").innerHTML=extraTotal;
+
+document.getElementById("partnership").innerHTML=partnership;
+
+document.getElementById("totalextras").innerHTML=totalExtras;
+//bRun=parseInt(document.getElementById(bowlerB+"run").innerHTML);
+//bRun=parseInt(batAString[1]);
+//alert(typeof(Run));
+
+
+Run=Run+1+parseInt(batAString[1]);
+document.getElementById(bowlerB+"run").innerHTML=Run;
+document.getElementById(bowlerB+"avg").innerHTML=parseFloat((Run/(bOver+"."+ballsOver))).toPrecision(3);
+
+//check=Run;
+//bRun=parseInt(Run);
+ 
+//parseInt(Run);
+//$("").text(Run);
+}
+
+ 
+
+ 
+
+else if(batAString[0]=="NB")
+
+{
+
+
+if(batAString[1]==0)
+{
+    // alert(batAString);
+ballStatus="No Ball, Free hit";
+//alert(ballStatus);
+document.getElementById("ballStatus").innerHTML=ballStatus;
+
+}
+else
+{
+ballStatus="No Ball plus "+String(batAString[1])+" runs, Free hit";
+//alert(ballStatus);
+document.getElementById("ballStatus").innerHTML=ballStatus;
+
+}
+
+
+if(ballsCount==12)
+
+{
+
+ 
+
+balls=balls.slice(1);
+
+balls[ballsCount]=" "+batASplit;
+
+ 
+
+}
+
+
+
+else
+
+{
+
+balls[ballsCount]=" "+batASplit;
+
+ballsCount=ballsCount+1;
+
+}
+
+document.getElementById("LastOverDetails").innerHTML=balls;
+ 
+
+if(parseInt(batAString[1])==1||parseInt(batAString[1])==3)
+
+{
+
+document.getElementById("batA").innerHTML=battingAname;
+
+document.getElementById("batAName").innerHTML=battingAname;
+
+document.getElementById("batB").innerHTML=battingBname+" *";
+
+document.getElementById("batBName").innerHTML=battingBname+" *";
+
+ 
+
+ 
+
+}
+
+noBall=noBall+1;
+
+totalExtras[1]=String(noBall)+"N";
+
+if(overDetails=="")
+
+{
+
+overDetails=batASplit;
+
+ 
+
+}
+
+else
+
+{
+
+overDetails=overDetails+", "+batASplit+" ";
+
+ 
+
+}
+
+extraTotal=extraTotal+1+parseInt(batAString[1]);
+
+totalRuns=totalRuns+1+parseInt(batAString[1]);
+
+//CRR calc
+
+if(overs==0&&ballsOver==0)
+{
+cRR="-";
+document.getElementById("CRR").innerHTML="-";
+} 
+else
+{
+cRR=(totalRuns*6)/((overs*6)+ballsOver);
+
+document.getElementById("CRR").innerHTML=cRR.toPrecision(3);
+}
+partnershipRuns=partnershipRuns+parseInt(batAString[1])+1;
+
+partnership=String(partnershipRuns)+" ("+String(partnershipBalls)+")";
+
+document.getElementById("overDetails").innerHTML=overDetails;
+
+document.getElementById("totalRuns").innerHTML=totalRuns;
+
+document.getElementById("extras").innerHTML=extraTotal;
+
+document.getElementById("partnership").innerHTML=partnership;
+
+document.getElementById("totalextras").innerHTML=totalExtras;
+
+Run=Run+1+parseInt(batAString[1]);
+document.getElementById(bowlerB+"run").innerHTML=Run;
+document.getElementById(bowlerB+"avg").innerHTML=parseFloat((Run/(bOver+"."+ballsOver))).toPrecision(3);
+
+
+
+}
+
+ 
+
+else if(batAString[0]=="LB")
+
+{
+
+
+
+
+if(batAString[1]==0)
+{
+    // alert(batAString);
+//ballStatus="";
+//alert(ballStatus);
+}
+else
+{
+ballStatus="LB - "+String(batAString[1])+" runs";
+//alert(ballStatus);
+document.getElementById("ballStatus").innerHTML=ballStatus;
+
+}
+
+if(ballsCount==12)
+
+{
+
+ 
+
+balls=balls.slice(1);
+
+balls[ballsCount]=" "+batASplit;
+
+ 
+
+}
+
+
+
+else
+
+{
+
+balls[ballsCount]=" "+batASplit;
+
+ballsCount=ballsCount+1;
+
+}
+
+document.getElementById("LastOverDetails").innerHTML=balls;
+
+ 
+
+ 
+
+ 
+
+lb=lb+1;
+
+totalExtras[2]=String(lb)+"LB";
+
+ballsOver=ballsOver+1;
+
+batABall=batABall+1;
+
+batASR=(batA/batABall)*100;
+
+document.getElementById(battingAname+"ball").innerHTML=batABall;
+
+document.getElementById(battingAname+"SR").innerHTML=batASR.toPrecision(3);
+ 
+
+//totalRuns=totalRuns+parseInt(batAString[1]);
+
+if(overDetails=="")
+
+{
+
+overDetails=batASplit;
+
+ 
+
+}
+
+else
+
+{
+
+overDetails=overDetails+", "+batASplit+" ";
+
+ 
+
+}
+
+ 
+
+extraTotal=extraTotal+parseInt(batAString[1]);
+
+totalRuns=totalRuns+parseInt(batAString[1]);
+
+//CRR calc
+
+cRR=(totalRuns*6)/((overs*6)+ballsOver);
+
+document.getElementById("CRR").innerHTML=cRR.toPrecision(3);
+
+partnershipRuns=partnershipRuns+parseInt(batAString[1]);
+
+partnershipBalls=partnershipBalls+1;
+
+partnership=String(partnershipRuns)+" ("+String(partnershipBalls)+")";
+
+document.getElementById("overDetails").innerHTML=overDetails;
+
+document.getElementById("totalRuns").innerHTML=totalRuns;
+
+//document.getElementById("curOver").innerHTML="0"+"."+String(ballsOver);
+
+document.getElementById("extras").innerHTML=extraTotal;
+
+document.getElementById("batAStrike").innerHTML=batASR.toPrecision(3);
+
+document.getElementById("batABalls").innerHTML=batABall;
+
+document.getElementById("partnership").innerHTML=partnership;
+
+document.getElementById("totalextras").innerHTML=totalExtras;
+
+ 
+
+ 
+
+ 
+if(ballsOver!=6)
+{
+
+if(parseInt(batAString[1])==1||parseInt(batAString[1])==3)
+
+{
+
+document.getElementById("batA").innerHTML=battingAname;
+
+document.getElementById("batAName").innerHTML=battingAname;
+
+document.getElementById("batB").innerHTML=battingBname+" *";
+
+document.getElementById("batBName").innerHTML=battingBname+" *";
+
+ 
+
+ }
+
+}
+else
+{
+if(parseInt(batAString[1])==0||parseInt(batAString[1])==2||parseInt(batAString[1])==4||parseInt(batAString[1])==6)
+
+{
+
+document.getElementById("batA").innerHTML=battingAname;
+
+document.getElementById("batAName").innerHTML=battingAname;
+
+document.getElementById("batB").innerHTML=battingBname+" *";
+
+document.getElementById("batBName").innerHTML=battingBname+" *";
+
+ 
+
+ }
+
+}
+
+ 
+
+ 
+
+ 
+
+if(ballsOver==6)
+
+{
+
+ballsOver=0;
+
+overs=overs+1;
+
+bOver=bOver+1;
+document.getElementById(bowlerB+"o").innerHTML=bOver;
+
+document.getElementById("bowName").innerHTML="NA";
+Run=Run+parseInt(batAString[1]);
+document.getElementById(bowlerB+"run").innerHTML=Run;
+document.getElementById(bowlerB+"avg").innerHTML=parseFloat((Run/(bOver))).toPrecision(3);
+
+bowlerB="NA";
+
+overDetails="";
+
+}
+else
+{
+    Run=Run+parseInt(batAString[1]);
+document.getElementById(bowlerB+"run").innerHTML=Run;
+document.getElementById(bowlerB+"o").innerHTML=String(bOver)+"."+String(ballsOver);
+document.getElementById(bowlerB+"avg").innerHTML=parseFloat((Run/(bOver+"."+ballsOver))).toPrecision(3);
+
+}
+
+
+// Run=Run+parseInt(batAString[1]);
+ //document.getElementById(bowlerB+"run").innerHTML=Run;
+
+
+document.getElementById("curOver").innerHTML="0"+"."+String(ballsOver);
+
+document.getElementById("totalOver").innerHTML=String(overs)+"."+String(ballsOver);
+
+ 
+
+ 
+
+ 
+
+}
+
+
+ 
+
+ 
+
+//Run calc
+
+else
+
+{
+
+
+
+if(batAString==1)
+{
+ballStatus="One Run";
+document.getElementById("ballStatus").innerHTML=ballStatus;
+
+}
+else if(batAString==2)
+{
+ballStatus="Two Runs";
+document.getElementById("ballStatus").innerHTML=ballStatus;
+
+}
+else if(batAString==3)
+{
+ballStatus="Three Runs";
+document.getElementById("ballStatus").innerHTML=ballStatus;
+
+}
+
+else if(batAString==4)
+{
+    batA4=batA4+1;
+document.getElementById(battingAname+"4").innerHTML=batA4;
+    ballStatus=battingAname+" hits a FOUR";
+
+document.getElementById("ballStatus").innerHTML=ballStatus;
+
+}
+else if(batAString==5)
+{
+ballStatus="Five Runs";
+document.getElementById("ballStatus").innerHTML=ballStatus;
+
+}
+
+
+else if (batAString==6) {
+    batA6=batA6+1;
+document.getElementById(battingAname+"6").innerHTML=batA6;
+ballStatus=battingAname+" hits a SIX";
+document.getElementById("ballStatus").innerHTML=ballStatus;
+
+}
+else
+{
+    ballStatus="Dot Ball";
+document.getElementById("ballStatus").innerHTML=ballStatus;
+
+}
+
+if(ballsCount==12)
+
+{
+
+ 
+
+balls=balls.slice(1);
+
+balls[ballsCount]=" "+batASplit;
+
+ 
+
+}
+
+
+
+else
+
+{
+
+balls[ballsCount]=" "+batASplit;
+
+ballsCount=ballsCount+1;
+
+}
+
+document.getElementById("LastOverDetails").innerHTML=balls;
+
+
+
+// if(batAString==4)
+// {
+//     batA4=batA4+1;
+// document.getElementById(battingAname+"4").innerHTML=batA4;
+    
+// }
+// if (batAString==6) {
+//     batA6=batA6+1;
+// document.getElementById(battingAname+"6").innerHTML=batA6;
+
+// }
+
+
+
+//alert("Run"); /*
+/*
+if(ballsCount==11)
+
+{
+
+ 
+
+ 
+
+balls=balls.slice(1);
+
+balls[ballsCount]=" "+batAString;
+
+}
+
+else
+
+{
+
+balls[ballsCount]=" "+batAString;
+
+ballsCount=ballsCount+1;
+
+}
+
+document.getElementById("LastOverDetails").innerHTML=balls;
+
+ 
+*/
+//alert(Run); 
+//Run=parseInt(Run)+parseInt(batAString[1]);
+//parseInt(Run);
+ 
+
+//alert(Run); 
+
+ballsOver=ballsOver+1;
+
+ 
+
+if(overDetails=="")
+
+{
+
+overDetails=batASplit;
+
+ 
+
+}
+
+else
+
+{
+
+overDetails=overDetails+", "+batASplit+" ";
+
+ 
+
+}
+
+ 
+
+if(ballsOver!=6)
+{
+if(parseInt(batAString)==1||parseInt(batAString)==3)
+
+{
+
+document.getElementById("batA").innerHTML=battingAname;
+
+document.getElementById("batAName").innerHTML=battingAname;
+
+document.getElementById("batB").innerHTML=battingBname+" *";
+
+document.getElementById("batBName").innerHTML=battingBname+" *";
+
+ 
+
+ }
+
+}
+else
+{
+if(parseInt(batAString)==0||parseInt(batAString)==2||parseInt(batAString)==4||parseInt(batAString)==6)
+
+{
+
+document.getElementById("batA").innerHTML=battingAname;
+
+document.getElementById("batAName").innerHTML=battingAname;
+
+document.getElementById("batB").innerHTML=battingBname+" *";
+
+document.getElementById("batBName").innerHTML=battingBname+" *";
+
+ 
+
+ }
+
+}
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+batA=batA+parseInt(batAString);
+
+batABall=batABall+1;
+
+batASR=(batA/batABall)*100;
+
+totalRuns=totalRuns+parseInt(batAString);
+
+//CRR calc
+
+cRR=(totalRuns*6)/((overs*6)+ballsOver);
+
+document.getElementById("CRR").innerHTML=cRR.toPrecision(3);
+
+ 
+
+partnershipRuns=partnershipRuns+parseInt(batAString);
+
+partnershipBalls=partnershipBalls+1;
+
+partnership=String(partnershipRuns)+" ("+String(partnershipBalls)+")";
+
+//alert(partnership);
+
+ 
+
+document.getElementById("batAScore").innerHTML=batA;
+
+document.getElementById("totalRuns").innerHTML=totalRuns;
+
+document.getElementById("batABalls").innerHTML=batABall;
+
+document.getElementById(battingAname+"run").innerHTML=batA;
+
+
+document.getElementById(battingAname+"ball").innerHTML=batABall;
+
+document.getElementById(battingAname+"SR").innerHTML=batASR.toPrecision(3);
+
+document.getElementById("overDetails").innerHTML=overDetails;
+
+document.getElementById("batAStrike").innerHTML=batASR.toPrecision(3);
+
+if(ballsOver==6)
+
+{
+
+ballsOver=0;
+
+overs=overs+1;
+
+bOver=bOver+1;
+document.getElementById(bowlerB+"o").innerHTML=bOver;
+
+document.getElementById("bowName").innerHTML="NA";
+
+Run=Run+parseInt(batAString);
+document.getElementById(bowlerB+"run").innerHTML=Run;
+document.getElementById(bowlerB+"avg").innerHTML=parseFloat((Run/(bOver))).toPrecision(3);
+
+
+bowlerB="NA";
+
+overDetails="";
+
+}
+else
+{
+    Run=Run+parseInt(batAString);
+document.getElementById(bowlerB+"run").innerHTML=Run;
+
+document.getElementById(bowlerB+"o").innerHTML=String(bOver)+"."+String(ballsOver);
+
+document.getElementById(bowlerB+"avg").innerHTML=parseFloat((Run/(bOver+"."+ballsOver))).toPrecision(3);
+
+}
+
+document.getElementById("totalOver").innerHTML=String(overs)+"."+String(ballsOver);
+
+
+document.getElementById("curOver").innerHTML="0"+"."+String(ballsOver);
+
+document.getElementById("partnership").innerHTML=partnership;
+
+
+
+
+
+
+}
+
+ 
+//Run calc end
+ 
+//document.getElementById(bowlerB+"avg").innerHTML=eRate;
+
+ 
+
+ 
+
+ 
+
+
+
+}
+
+
+ 
+
+// Run calculation Team A batsman B Start
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+//batASplit=$("#scoreA").val();
+
+batBSplit=$("#scoreB").val();
+
+//batAString=batASplit.split("-");
+
+batBString=batBSplit.split("-");
+
+//alert(batAString[0]+batBString[0]);
+
+ 
+
+// Run calculation Team A batsman B
+
+if(batAString=="NA"&&bowlerB!="NA")
+
+{
+
+ 
+
+//alert("Batsman B Calc");
+
+ 
+
+ 
+
+ 
+
+if(batBString[0]=="NA")
+
+{
+
+}
+
+ 
+
+else if(batBString[0]=="WK")
+
+{
+
+
+
+
+if(ballsCount==12)
+
+{
+
+ 
+
+balls=balls.slice(1);
+
+balls[ballsCount]=" "+batBSplit;
+
+ 
+
+}
+
+
+
+else
+
+{
+
+balls[ballsCount]=" "+batBSplit;
+
+ballsCount=ballsCount+1;
+
+}
+
+document.getElementById("LastOverDetails").innerHTML=balls;
+
+
+
+
+
+
+
+    if(batBString[1]=="C")
+{
+//alert(batValues[Math.floor((Math.random() * batValues.length) + 1)]);
+temp=catchValues[Math.floor((Math.random() * catchValues.length) )];
+
+document.getElementById(battingBname+"C").innerHTML=temp+"(c)";
+document.getElementById(battingBname+"bowl").innerHTML=bowlerB+"(b)";
+ballStatus=battingBname+" out, caught by "+String(document.getElementById(battingBname+"C").innerHTML);
+//alert(ballStatus);
+document.getElementById("ballStatus").innerHTML=ballStatus;
+
+}
+else if(batBString[1]=="Run")
+{
+//alert(batValues[Math.floor((Math.random() * batValues.length) + 1)]);
+temp=catchValues[Math.floor((Math.random() * catchValues.length) )];
+document.getElementById(battingBname+"C").innerHTML=temp+"(Ro)";
+//document.getElementById(battingBname+"bowl").innerHTML=bowlerB;
+//ballStatus="Wicket "+battingBname+" run out by "+String(document.getElementById(battingBname+"C").innerHTML);
+ballStatus=battingAname+" out, run out by "+temp;
+//alert(ballStatus);
+document.getElementById("ballStatus").innerHTML=ballStatus;
+
+}
+else
+{
+document.getElementById(battingBname+"bowl").innerHTML=bowlerB+"(Lbw)";
+ballStatus="Wicket Lbw, "+battingBname+" gone";
+document.getElementById("ballStatus").innerHTML=ballStatus;
+
+}
+
+
+//alert("Batsman B WK");
+
+ballsOver=ballsOver+1;
+
+ 
+
+//CRR calc
+
+cRR=(totalRuns*6)/((overs*6)+ballsOver);
+
+document.getElementById("CRR").innerHTML=cRR.toPrecision(3);
+
+ 
+
+ 
+
+partnershipRuns=0;
+
+partnershipBalls=0;
+
+wickets=wickets+1;
+
+if(overDetails=="")
+
+{
+
+overDetails=" WK";
+
+ 
+
+}
+
+else
+
+{
+
+overDetails=overDetails+", WK ";
+
+ 
+
+}
+
+ 
+
+if(wkDetailsName=="")
+
+{
+
+ 
+
+wkDetailsName=battingBname;
+
+document.getElementById("wkDetailsName").innerHTML=wkDetailsName;
+
+//alert(wkDetailsName);
+
+}
+
+else
+
+{
+
+wkDetailsName=wkDetailsName+", "+battingBname;
+
+document.getElementById("wkDetailsName").innerHTML=wkDetailsName;
+
+//alert(wkDetailsName);
+
+}
+
+ 
+
+ 
+
+if(wkDetailsA=="")
+
+{
+
+wkDetailsA=String(totalRuns)+"-"+String(wickets)+"-"+String(overs)+"."+String(ballsOver);
+
+ 
+
+ 
+
+}
+
+else
+
+{
+
+//wkDetailsA=String(totalRuns)+"-"+String(wickets);
+
+wkDetailsA=wkDetailsA+", "+String(totalRuns)+"-"+String(wickets)+"-"+String(overs)+"."+String(ballsOver);
+
+}
+
+ 
+
+document.getElementById("totalWK").innerHTML=wickets;
+
+document.getElementById("totalOver").innerHTML=String(overs)+"."+String(ballsOver);
+
+//document.getElementById("curOver").innerHTML="0"+"."+String(ballsOver);
+
+document.getElementById("overDetails").innerHTML=overDetails;
+
+document.getElementById("wkDetailsA").innerHTML=wkDetailsA;
+
+partnership=String(partnershipRuns)+" ("+String(partnershipBalls)+")";
+
+ 
+batBBall=batBBall+1;
+
+batBSR=(batB/batBBall)*100;
+document.getElementById(battingBname+"ball").innerHTML=batBBall;
+
+document.getElementById(battingBname+"SR").innerHTML=batBSR.toPrecision(3);
+
+ 
+
+if(wickets==10)
+{
+
+}
+else
+{
+batSelect=batSelect+1;
+}
+lastWK="Last wkt : "+String(battingBname)+" "+String(batB)+"("+String(batBBall)+")";
+//alert(lastWK);
+
+document.getElementById(battingBname).innerHTML=battingBname;
+battingBname=batValues[batSelect];
+//document.getElementById(battingBname).innerHTML=battingBname+" (Not Out)";
+ document.getElementById(battingBname).innerHTML=battingBname;
+
+if(ballsOver==6)
+
+{
+
+ 
+
+document.getElementById("batBName").innerHTML=battingBname;
+
+document.getElementById("batB").innerHTML=battingBname;
+
+document.getElementById("batAName").innerHTML=battingAname+" *";
+
+document.getElementById("batA").innerHTML=battingAname+" *";
+
+}
+
+else
+
+{
+
+document.getElementById("batBName").innerHTML=battingBname+" *";
+
+document.getElementById("batB").innerHTML=battingBname+" *";
+
+document.getElementById("batAName").innerHTML=battingAname;
+
+document.getElementById("batA").innerHTML=battingAname;
+
+//alert("else"+battingAname);
+
+}
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+if(ballsOver==6)
+
+{
+
+ballsOver=0;
+
+overs=overs+1;
+
+document.getElementById("bowName").innerHTML="NA";
+bOver=bOver+1;
+document.getElementById(bowlerB+"avg").innerHTML=parseFloat((Run/(bOver))).toPrecision(3);
+
+document.getElementById(bowlerB+"o").innerHTML=bOver;
+bWK=bWK+1;
+document.getElementById(bowlerB+"wk").innerHTML=bWK;
+
+bowlerB="NA";
+
+overDetails="";
+
+
+//document.getElementById("overDetails").innerHTML="";
+
+}
+else
+{
+bWK=bWK+1;
+document.getElementById(bowlerB+"wk").innerHTML=bWK;
+document.getElementById(bowlerB+"o").innerHTML=String(bOver)+"."+String(ballsOver);
+document.getElementById(bowlerB+"avg").innerHTML=parseFloat((Run/(bOver+"."+ballsOver))).toPrecision(3);
+
+}
+
+
+document.getElementById("curOver").innerHTML="0"+"."+String(ballsOver);
+
+document.getElementById("totalOver").innerHTML=String(overs)+"."+String(ballsOver);
+
+document.getElementById("partnership").innerHTML=partnership;
+
+ 
+
+ 
+
+batB=0;
+
+batBBall=0;
+
+batBSR=0;
+
+batB4=0;
+batB6=0;
+
+document.getElementById("batBBalls").innerHTML=batBBall;
+
+document.getElementById("batBScore").innerHTML=batB;
+
+document.getElementById("batBStrike").innerHTML=batBSR;
+
+ 
+
+ 
+
+}
+
+ 
+
+else if(batBString[0]=="WI")
+
+{
+
+    if(batBString[1]==0)
+{
+    // alert(batAString);
+ballStatus="Wide";
+//alert(ballStatus);
+document.getElementById("ballStatus").innerHTML=ballStatus;
+
+}
+else
+{
+ballStatus="Wide plus "+String(batBString[1])+" runs";
+//alert(ballStatus);
+document.getElementById("ballStatus").innerHTML=ballStatus;
+
+}
+
+
+if(ballsCount==12)
+
+{
+
+ 
+
+balls=balls.slice(1);
+
+balls[ballsCount]=" "+batBSplit;
+
+ 
+
+}
+
+
+
+else
+
+{
+
+balls[ballsCount]=" "+batBSplit;
+
+ballsCount=ballsCount+1;
+
+}
+
+document.getElementById("LastOverDetails").innerHTML=balls;
+ 
+
+if(parseInt(batBString[1])==1||parseInt(batBString[1])==3)
+
+{
+
+document.getElementById("batB").innerHTML=battingBname;
+
+document.getElementById("batBName").innerHTML=battingBname;
+
+document.getElementById("batA").innerHTML=battingAname+" *";
+
+document.getElementById("batAName").innerHTML=battingAname+" *";
+
+ 
+
+ 
+
+}
+
+ 
+
+if(overDetails=="")
+
+{
+
+overDetails=batBSplit;
+
+ 
+
+}
+
+else
+
+{
+
+overDetails=overDetails+", "+batBSplit+" ";
+
+ 
+
+}
+
+ 
+
+//alert(batBString+" "+overDetails);
+
+ 
+
+extraTotal=extraTotal+1+parseInt(batBString[1]);
+
+wide=wide+1;
+
+totalExtras[0]=String(wide)+"W";
+
+totalRuns=totalRuns+1+parseInt(batBString[1]);
+
+//CRR calc
+
+if(overs==0&&ballsOver==0)
+{
+cRR="-";
+document.getElementById("CRR").innerHTML="-";
+} 
+else
+{
+cRR=(totalRuns*6)/((overs*6)+ballsOver);
+
+document.getElementById("CRR").innerHTML=cRR.toPrecision(3);
+}
+partnershipRuns=partnershipRuns+parseInt(batBString[1])+1;
+
+partnership=String(partnershipRuns)+" ("+String(partnershipBalls)+")";
+
+document.getElementById("overDetails").innerHTML=overDetails;
+
+document.getElementById("totalRuns").innerHTML=totalRuns;
+
+document.getElementById("extras").innerHTML=extraTotal;
+
+document.getElementById("partnership").innerHTML=partnership;
+
+document.getElementById("totalextras").innerHTML=totalExtras;
+Run=Run+1+parseInt(batBString[1]);
+document.getElementById(bowlerB+"run").innerHTML=Run;
+document.getElementById(bowlerB+"avg").innerHTML=parseFloat((Run/(bOver+"."+ballsOver))).toPrecision(3);
+
+
+}
+
+ 
+
+ 
+
+else if(batBString[0]=="NB")
+
+{
+
+if(batBString[1]==0)
+{
+    // alert(batAString);
+ballStatus="No Ball, Free hit";
+document.getElementById("ballStatus").innerHTML=ballStatus;
+
+//alert(ballStatus);
+}
+else
+{
+ballStatus="No Ball plus "+String(batBString[1])+" runs, Free hit";
+document.getElementById("ballStatus").innerHTML=ballStatus;
+
+//alert(ballStatus);
+}
+
+ 
+if(ballsCount==12)
+
+{
+
+ 
+
+balls=balls.slice(1);
+
+balls[ballsCount]=" "+batBSplit;
+
+ 
+
+}
+
+
+
+else
+
+{
+
+balls[ballsCount]=" "+batBSplit;
+
+ballsCount=ballsCount+1;
+
+}
+
+document.getElementById("LastOverDetails").innerHTML=balls;
+
+ 
+
+if(parseInt(batBString[1])==1||parseInt(batBString[1])==3)
+
+{
+
+document.getElementById("batB").innerHTML=battingBname;
+
+document.getElementById("batBName").innerHTML=battingBname;
+
+document.getElementById("batA").innerHTML=battingAname+" *";
+
+document.getElementById("batAName").innerHTML=battingAname+" *";
+
+ 
+
+ 
+
+}
+
+ 
+
+ 
+
+noBall=noBall+1;
+
+totalExtras[1]=String(noBall)+"N";
+
+if(overDetails=="")
+
+{
+
+overDetails=batBSplit;
+
+ 
+
+}
+
+else
+
+{
+
+overDetails=overDetails+", "+batBSplit+" ";
+
+ 
+
+}
+
+extraTotal=extraTotal+1+parseInt(batBString[1]);
+
+totalRuns=totalRuns+1+parseInt(batBString[1]);
+
+//CRR calc
+
+if(overs==0&&ballsOver==0)
+{
+cRR="-";
+document.getElementById("CRR").innerHTML="-";
+} 
+else
+{
+cRR=(totalRuns*6)/((overs*6)+ballsOver);
+
+document.getElementById("CRR").innerHTML=cRR.toPrecision(3);
+}
+partnershipRuns=partnershipRuns+parseInt(batBString[1])+1;
+
+partnership=String(partnershipRuns)+" ("+String(partnershipBalls)+")";
+
+document.getElementById("overDetails").innerHTML=overDetails;
+
+document.getElementById("totalRuns").innerHTML=totalRuns;
+
+document.getElementById("extras").innerHTML=extraTotal;
+
+document.getElementById("partnership").innerHTML=partnership;
+
+document.getElementById("totalextras").innerHTML=totalExtras;
+
+Run=Run+1+parseInt(batBString[1]);
+document.getElementById(bowlerB+"run").innerHTML=Run;
+document.getElementById(bowlerB+"avg").innerHTML=parseFloat((Run/(bOver+"."+ballsOver))).toPrecision(3);
+
+}
+
+ 
+
+else if(batBString[0]=="LB")
+
+{
+
+
+if(batBString[1]==0)
+{
+    // alert(batAString);
+//ballStatus="";
+//alert(ballStatus);
+}
+else
+{
+ballStatus="LB - "+String(batBString[1])+" runs";
+//alert(ballStatus);
+document.getElementById("ballStatus").innerHTML=ballStatus;
+
+}
+
+
+
+if(ballsCount==12)
+
+{
+
+ 
+
+balls=balls.slice(1);
+
+balls[ballsCount]=" "+batBSplit;
+
+ 
+
+}
+
+
+
+else
+
+{
+
+balls[ballsCount]=" "+batBSplit;
+
+ballsCount=ballsCount+1;
+
+}
+
+document.getElementById("LastOverDetails").innerHTML=balls;
+
+
+
+
+lb=lb+1;
+
+totalExtras[2]=String(lb)+"LB";
+
+ballsOver=ballsOver+1;
+
+batBBall=batBBall+1;
+
+batBSR=(batB/batBBall)*100;
+
+document.getElementById(battingBname+"ball").innerHTML=batBBall;
+
+document.getElementById(battingBname+"SR").innerHTML=batBSR.toPrecision(3);
+
+//totalRuns=totalRuns+parseInt(batBString[1]);
+
+if(overDetails=="")
+
+{
+
+overDetails=batBSplit;
+
+ 
+
+}
+
+else
+
+{
+
+overDetails=overDetails+", "+batBSplit+" ";
+
+ 
+
+}
+
+ 
+
+extraTotal=extraTotal+parseInt(batBString[1]);
+
+totalRuns=totalRuns+parseInt(batBString[1]);
+
+//CRR calc
+
+cRR=(totalRuns*6)/((overs*6)+ballsOver);
+
+document.getElementById("CRR").innerHTML=cRR.toPrecision(3);
+
+partnershipRuns=partnershipRuns+parseInt(batBString[1]);
+
+partnershipBalls=partnershipBalls+1;
+
+partnership=String(partnershipRuns)+" ("+String(partnershipBalls)+")";
+
+document.getElementById("overDetails").innerHTML=overDetails;
+
+document.getElementById("totalRuns").innerHTML=totalRuns;
+
+//document.getElementById("curOver").innerHTML="0"+"."+String(ballsOver);
+
+document.getElementById("extras").innerHTML=extraTotal;
+
+document.getElementById("batBStrike").innerHTML=batBSR.toPrecision(3);
+
+document.getElementById("batBBalls").innerHTML=batBBall;
+
+document.getElementById("partnership").innerHTML=partnership;
+
+document.getElementById("totalextras").innerHTML=totalExtras;
+
+ 
+
+ 
+//alert(ballsOver);
+ if(ballsOver!=6)
+{
+if((parseInt(batBString[1])==1||parseInt(batBString[1])==3))
+
+{
+
+document.getElementById("batB").innerHTML=battingBname;
+
+document.getElementById("batBName").innerHTML=battingBname;
+
+document.getElementById("batA").innerHTML=battingAname+" *";
+
+document.getElementById("batAName").innerHTML=battingAname+" *";
+
+ 
+
+ 
+
+}
+}
+ 
+ else{
+
+    if((parseInt(batBString)==2||parseInt(batBString)==4||parseInt(batBString)==0||parseInt(batBString)==6))
+
+{
+
+document.getElementById("batB").innerHTML=battingBname;
+
+document.getElementById("batBName").innerHTML=battingBname;
+
+document.getElementById("batA").innerHTML=battingAname+" *";
+
+document.getElementById("batAName").innerHTML=battingAname+" *";
+
+ 
+
+ 
+
+}
+
+}
+
+if(ballsOver==6)
+
+{
+
+ballsOver=0;
+
+overs=overs+1;
+bOver=bOver+1;
+document.getElementById(bowlerB+"avg").innerHTML=parseFloat((Run/(bOver))).toPrecision(3);
+
+document.getElementById(bowlerB+"o").innerHTML=bOver;
+
+document.getElementById("bowName").innerHTML="NA";
+Run=Run+parseInt(batBString[1]);
+document.getElementById(bowlerB+"run").innerHTML=Run;
+
+bowlerB="NA";
+
+overDetails="";
+
+}
+else
+{
+Run=Run+parseInt(batBString[1]);
+document.getElementById(bowlerB+"run").innerHTML=Run;
+    document.getElementById(bowlerB+"o").innerHTML=String(bOver)+"."+String(ballsOver);
+document.getElementById(bowlerB+"avg").innerHTML=parseFloat((Run/(bOver+"."+ballsOver))).toPrecision(3);
+
+}
+document.getElementById("curOver").innerHTML="0"+"."+String(ballsOver);
+
+document.getElementById("totalOver").innerHTML=String(overs)+"."+String(ballsOver);
+
+// document.getElementById(bowlerB+"o").innerHTML=String(bOver)+"."+String(ballsOver);
+
+
+ 
+
+ 
+
+}
+
+ 
+
+ 
+
+ 
+//run calc
+else
+
+{
+
+if(batBString==1)
+{
+ballStatus="One Run";
+//alert(ballStatus);
+document.getElementById("ballStatus").innerHTML=ballStatus;
+
+}
+else if(batBString==2)
+{
+ballStatus="Two Runs";
+document.getElementById("ballStatus").innerHTML=ballStatus;
+
+}
+else if(batBString==3)
+{
+ballStatus="Three Runs";
+document.getElementById("ballStatus").innerHTML=ballStatus;
+
+}
+
+else if(batBString==4)
+{
+    batB4=batB4+1;
+document.getElementById(battingBname+"4").innerHTML=batB4;
+  ballStatus=battingBname+" hits a FOUR";  
+document.getElementById("ballStatus").innerHTML=ballStatus;
+
+}
+else if(batBString==5)
+{
+ballStatus="Five Runs";
+document.getElementById("ballStatus").innerHTML=ballStatus;
+
+}
+
+else if (batBString==6) {
+    batB6=batB6+1;
+document.getElementById(battingBname+"6").innerHTML=batB6;
+ballStatus=battingBname+" hits a Six";
+document.getElementById("ballStatus").innerHTML=ballStatus;
+
+}
+else
+{
+    ballStatus="Dot Ball";
+document.getElementById("ballStatus").innerHTML=ballStatus;
+
+}
+
+
+if(ballsCount==12)
+
+{
+
+ 
+
+balls=balls.slice(1);
+
+balls[ballsCount]=" "+batBSplit;
+
+ 
+
+}
+
+
+
+else
+
+{
+
+balls[ballsCount]=" "+batBSplit;
+
+ballsCount=ballsCount+1;
+
+}
+
+document.getElementById("LastOverDetails").innerHTML=balls;
+
+
+
+
+
+
+
+
+
+ballsOver=ballsOver+1;
+
+ 
+
+if(overDetails=="")
+
+{
+
+overDetails=batBSplit;
+
+ 
+
+}
+
+else
+
+{
+
+overDetails=overDetails+", "+batBSplit+" ";
+
+ 
+
+}
+
+batB=batB+parseInt(batBString);
+
+batBBall=batBBall+1;
+
+batBSR=(batB/batBBall)*100;
+
+totalRuns=totalRuns+parseInt(batBString);
+
+//CRR calc
+
+cRR=(totalRuns*6)/((overs*6)+ballsOver);
+
+document.getElementById("CRR").innerHTML=cRR.toPrecision(3);
+
+partnershipRuns=partnershipRuns+parseInt(batBString);
+
+partnershipBalls=partnershipBalls+1;
+
+partnership=String(partnershipRuns)+" ("+String(partnershipBalls)+")";
+
+//alert(partnership);
+
+ 
+
+document.getElementById("batBScore").innerHTML=batB;
+
+document.getElementById("totalRuns").innerHTML=totalRuns;
+
+document.getElementById("batBBalls").innerHTML=batBBall;
+
+document.getElementById("overDetails").innerHTML=overDetails;
+
+document.getElementById("batBStrike").innerHTML=batBSR.toPrecision(3);
+
+document.getElementById(battingBname+"run").innerHTML=batB;
+
+
+document.getElementById(battingBname+"ball").innerHTML=batBBall;
+
+document.getElementById(battingBname+"SR").innerHTML=batBSR.toPrecision(3);
+ 
+
+ 
+if(ballsOver!=6)
+{
+if((parseInt(batBString)==1||parseInt(batBString)==3))
+
+{
+
+document.getElementById("batB").innerHTML=battingBname;
+
+document.getElementById("batBName").innerHTML=battingBname;
+
+document.getElementById("batA").innerHTML=battingAname+" *";
+
+document.getElementById("batAName").innerHTML=battingAname+" *";
+
+ 
+
+ 
+
+}
+}
+else{
+
+    if((parseInt(batBString)==2||parseInt(batBString)==4||parseInt(batBString)==0||parseInt(batBString)==6))
+
+{
+
+document.getElementById("batB").innerHTML=battingBname;
+
+document.getElementById("batBName").innerHTML=battingBname;
+
+document.getElementById("batA").innerHTML=battingAname+" *";
+
+document.getElementById("batAName").innerHTML=battingAname+" *";
+
+ 
+
+ 
+
+}
+
+}
+
+ 
+
+if(ballsOver==6)
+
+{
+
+ballsOver=0;
+
+overs=overs+1;
+
+document.getElementById("bowName").innerHTML="NA";
+bOver=bOver+1;
+document.getElementById(bowlerB+"avg").innerHTML=parseFloat((Run/(bOver))).toPrecision(3);
+
+document.getElementById(bowlerB+"o").innerHTML=bOver;
+
+Run=Run+parseInt(batBString);
+document.getElementById(bowlerB+"run").innerHTML=Run;
+
+bowlerB="NA";
+
+overDetails="";
+
+}
+
+else
+{
+    Run=Run+parseInt(batBString);
+document.getElementById(bowlerB+"run").innerHTML=Run;
+document.getElementById(bowlerB+"o").innerHTML=String(bOver)+"."+String(ballsOver);
+document.getElementById(bowlerB+"avg").innerHTML=parseFloat((Run/(bOver+"."+ballsOver))).toPrecision(3);
+
+}
+
+document.getElementById("totalOver").innerHTML=String(overs)+"."+String(ballsOver);
+
+document.getElementById("curOver").innerHTML="0"+"."+String(ballsOver);
+
+document.getElementById("partnership").innerHTML=partnership;
+
+
+}
+
+ 
+
+ 
+
+ 
+
+
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+//}// End of both run selected if else
+
+ 
+
+ 
+
+// Run calculation Team A batsman B End
+
+
+
+}
+}
+
+
+
+
+
+
+
+                                                        // To Store value to Database
+
+
+
+// Match id
+
+matchidr=document.getElementById("matchID").innerHTML;
+
+
+
+// Batting Team Name
+
+battingTname=document.getElementById("teamAName").innerHTML;
+
+
+
+
+// Bowling Team Name
+
+bowlingTname=document.getElementById("teamBName").innerHTML;
+
+
+
+// current Batsman
+
+currentABat=document.getElementById("batA").innerHTML;
+currentBBat=document.getElementById("batB").innerHTML;
+
+
+// current batsman R,B,SR = batA,batAball,batASR,batB,batBBall,batBSR
+
+// Partnership = partnership,partnershipRuns,partnershipBalls
+
+
+
+//Score Board =totalRuns, wickets,overs,ballsover 
+
+
+// Selected Bowler= bowlerB
+
+
+// Current run rate use this  cRR=(totalRuns*6)/((overs*6)+ballsOver);
+
+
+// Current over use this document.getElementById("curOver").innerHTML="0"+"."+String(ballsOver);
+
+
+// overdetails= overdetails variable
+
+
+//Last over = balls,ballscount
+
+// pass batselect value to find next batsman
+
+// Extras= extratotal, totalextras
+
+// Bowler Div store + bWK,bOver,Run variables
+
+
+
+
+bowValues.forEach(val=>{
+
+
+bowlArray.push([String(document.getElementById(val+"o").innerHTML),String(document.getElementById(val+"m").innerHTML),String(document.getElementById(val+"run").innerHTML),String(document.getElementById(val+"wk").innerHTML),String(document.getElementById(val+"avg").innerHTML)]);
+
+});
+
+
+//Batsman Div store + batA4,batB4,batA6,batB6
+
+batValues.forEach(val=>{
+
+
+
+batArray.push([String(document.getElementById(val).innerHTML),String(document.getElementById(val+"run").innerHTML),String(document.getElementById(val+"ball").innerHTML),String(document.getElementById(val+"SR").innerHTML),String(document.getElementById(val+"4").innerHTML),String(document.getElementById(val+"6").innerHTML),String(document.getElementById(val+"bowl").innerHTML),String(document.getElementById(val+"C").innerHTML)]);
+
+});
+
+Average=parseFloat((Run/(bOver+"."+ballsOver))).toPrecision(3);
+jsonData={
+          "matchId":matchidr,
+          "battingTname":teamAName,
+          "bowlingTname":teamBName,
+          "currentABat":currentABat,
+          "currentBBat":currentBBat,
+          "batA":batA,
+          "batABall":batABall,
+          "batASR":batASR,
+          "lastWK":lastWK,
+          "batB":batB,
+          "batB4":batB4,
+          "batB6":batB6,
+          "batA4":batA4,
+          "batA6":batA6,
+          "batBBall":batBBall,
+          "batBSR":batBSR,
+          "partnership":partnership,
+          "partnershipRuns":partnershipRuns,
+          "partnershipBalls":partnershipBalls,
+          "totalRuns":totalRuns,
+          "overs":overs,
+          "wickets":wickets,
+          "ballsOver":ballsOver,
+          "bowlerB":bowlerB,
+          "overDetails":overDetails,
+          "balls":balls,
+          "ballsCount":ballsCount,
+          "batSelect":batSelect,
+          "extraTotal":extraTotal,
+          "totalExtras":totalExtras,
+          "bWK":bWK,
+          "bOver":bOver,
+          "Run":Run,
+          "ER":Average,
+          "bowlArray":bowlArray,
+          "batArray":batArray,
+          "ballStatus":ballStatus,
+          "lastWK":lastWK,
+          "ballStatus":ballStatus,
+          "batting":"First batting",
+          "wkDetailsName":wkDetailsName,
+          "wkDetailsA":wkDetailsA,
+          "status":"running",
+          "match_status":"STARTED"
+         };
+//document.write(JSON.stringify(jsonData));
+
+$.ajax({
+
+
+    url:"http://criczz.us-east-2.elasticbeanstalk.com/criczz/save",
+    type:'POST',
+    contentType:'application/json',
+    dataType:'json',
+    data:JSON.stringify(jsonData),
+    success:function(result){
+       console.log(result);
+
+    },
+    error:function (result,thrownError) {
+        // body...
+        alert("In submit data "+thrownError);
+    }
+});
+
+
+
+
+}
+
+
+
+});
+
+ 
+
+ 
+
+//Bowler Button
+
+$("#bowerBSubmit").click(function()
+
+  {
+
+document.getElementById("overDetails").innerHTML="";
+
+var bowlersBA="";
+
+bowlerB=$("#bowlerB").val();
+
+//alert(bowlerB);
+
+document.getElementById("bowName").innerHTML=bowlerB;
+
+            
+// bSp=document.getElementById(bowlerB+"sp").innerHTML;
+// bLorR=document.getElementById(bowlerB+"lorR").innerHTML;
+bOver=parseInt(document.getElementById(bowlerB+"o").innerHTML);
+// bMaiden=parseInt(document.getElementById(bowlerB+"m").innerHTML);
+ bRun=document.getElementById(bowlerB+"run").innerHTML;
+// bAverage=parseInt(document.getElementById(bowlerB+"avg").innerHTML);
+ bWK=parseInt(document.getElementById(bowlerB+"wk").innerHTML);
+//alert(bWK);
+ 
+//speed=document.getElementById(bowlerB+"sp").innerHTML;
+//LorR=document.getElementById(bowlerB+"lorR").innerHTML;
+//Over=parseInt(document.getElementById(bowlerB+"o").innerHTML);
+Maiden=parseInt(document.getElementById(bowlerB+"m").innerHTML);
+//Run=parseInt(document.getElementById(bowlerB+"run").innerHTML);
+Run=parseInt(bRun);
+Average=parseInt(document.getElementById(bowlerB+"avg").innerHTML);
+//Wicket=parseInt(document.getElementById(bowlerB+"wk").innerHTML);
+
+ 
+
+});
+
+ 
+
+
+// base load ajax end
+
+
+    },
+    error:function (xhr, ajaxOptions, thrownError) {
+        // body...
+        alert(thrownError);
+    }
+});
+
+
+// base load ajax end
+
+
+$("#retButton").click(function()
+{
+
+//idsplit[0]=1;
+
+$.ajax({
+
+
+    url:"http://criczz.us-east-2.elasticbeanstalk.com/criczz/get/"+idsplit[0],
+    type:'GET',
+    success:function(result){
+        //alert(result.batA);
+console.log("Reterieved from DB"+result);
+result = result.FIRST_BATTING;
+var batASp,batBSp;
+
+matchidr=result.matchId;
+teamAName=result.battingTname;
+teamBName=result.bowlingTname;
+batA=result.batA;
+batAball=result.batABall;
+batASR=result.batASR;
+currentABat=result.currentABat;
+currentBBat=result.currentBBat;
+
+batASp=currentABat.split("*");
+batBSp=currentBBat.split("*");
+battingAname=batASp[0].trim();
+battingBname=batBSp[0].trim();
+batA=result.batA;
+batABall=result.batABall;
+batASR=result.batASR;
+batB=result.batB;
+batBall=result.batBBall;
+batBSR=result.batBSR;
+partnership=result.partnership;
+partnershipRuns=result.partnershipRuns;
+partnershipBalls=result.partnershipBalls;
+totalRuns=result.totalRuns;
+ wickets=result.wickets;
+ overs=result.overs;
+ ballsOver=parseInt(result.ballsOver);
+ bowlerB=result.bowlerB;
+overDetails=result.overDetails;
+balls=result.balls;
+ballsCount=result.ballsCount;
+batSelect=result.batSelect;
+extraTotal=result.extraTotal;
+totalExtras=result.totalExtras;
+bWK=parseInt(result.bWK);
+bOver=parseInt(result.bOver);
+Run=parseInt(result.Run);
+bowlArray=result.bowlArray;
+batArray=result.batArray;
+wkDetailsA=result.wkDetailsA;
+wkDetailsAName=result.wkDetailsAName;
+ballStatus=result.ballStatus;
+document.getElementById("ballStatus").innerHTML=ballStatus;
+
+document.getElementById("wkDetailsA").innerHTML=wkDetailsA;
+document.getElementById("wkDetailsName").innerHTML=wkDetailsAName;
+
+document.getElementById("matchID").innerHTML=matchidr;
+document.getElementById("teamAName").innerHTML="Batting--> "+teamAName;
+document.getElementById("teamBName").innerHTML="Bowling--> "+teamBName;
+document.getElementById("batA").innerHTML=currentABat;
+document.getElementById("batB").innerHTML=currentBBat;
+document.getElementById("batAName").innerHTML=currentABat;
+document.getElementById("batBName").innerHTML=currentBBat;
+document.getElementById("batAScore").innerHTML=batA;
+document.getElementById("batABalls").innerHTML=batABall;
+document.getElementById("batAStrike").innerHTML=batASR.toPrecision(3);
+document.getElementById("batBScore").innerHTML=batB;
+document.getElementById("batBBalls").innerHTML=batBBall;
+document.getElementById("batBStrike").innerHTML=batBSR.toPrecision(3);
+document.getElementById("partnership").innerHTML=String(partnershipRuns)+" ("+String(partnershipBalls)+")";
+ document.getElementById("totalWK").innerHTML=wickets;
+ document.getElementById("totalOver").innerHTML=String(overs)+"."+String(ballsOver);
+document.getElementById("totalRuns").innerHTML=totalRuns;
+document.getElementById("bowName").innerHTML=bowlerB;
+document.getElementById("CRR").innerHTML=((totalRuns*6)/((overs*6)+ballsOver)).toPrecision(3);
+document.getElementById("curOver").innerHTML="0"+"."+String(ballsOver);
+document.getElementById("LastOverDetails").innerHTML=balls;
+document.getElementById("overDetails").innerHTML=overDetails;
+document.getElementById("extras").innerHTML=extraTotal;
+document.getElementById("totalextras").innerHTML=totalExtras;
+var i=0;var ch=[];
+bowValues.forEach(val=>{
+//document.getElementById(bowlArray[i][4]+"m").innerHTML="4";
+ch=bowlArray[i];
+//alert(ch[0]);
+//document.getElementById(ch[0]+"sp").innerHTML=ch[1];
+//document.getElementById(ch[0]+"lorR").innerHTML=ch[2];
+//document.getElementById(ch[0]+"o").innerHTML=String(bOver)+"."+String(ballsOver);
+//alert(ballsOver+ch[3]);
+document.getElementById(val+"o").innerHTML=ch[0];
+document.getElementById(val+"m").innerHTML=ch[1];
+document.getElementById(val+"run").innerHTML=ch[2];
+document.getElementById(val+"wk").innerHTML=ch[3];
+document.getElementById(val+"avg").innerHTML=ch[4];
+i+=1;
+
+});
+
+i=0;
+batValues.forEach(val=>{
+//document.getElementById(bowlArray[i][4]+"m").innerHTML="4";
+ch=batArray[i];
+//alert(ch[0]);
+document.getElementById(ch[0]+"run").innerHTML=ch[1];
+document.getElementById(ch[0]+"ball").innerHTML=ch[2];
+document.getElementById(ch[0]+"SR").innerHTML=ch[3];
+document.getElementById(ch[0]+"4").innerHTML=ch[4];
+document.getElementById(ch[0]+"6").innerHTML=ch[5];
+document.getElementById(ch[0]+"bowl").innerHTML=ch[6];
+document.getElementById(ch[0]+"C").innerHTML=ch[7];
+i+=1;
+
+});
+
+
+
+
+
+    },
+    error:function (result,thrownError) {
+        alert("In Reterive Error  "+thrownError);
+    }
+});
+
+
+
+
+});
+
+
+// back lay submit
+$("#teamBBLSubmit").click(function()
+ {
+
+
+FavTeam=$("#fTeam").val();
+$("#fTeam").val("");
+ RXBTeam=$("#rXBTeam").val();
+ $("#rXBTeam").val("");
+PointA=$("#point-A").val();
+$("#point-A").val("");
+PointB=$("#point-B").val();
+$("#point-B").val("");
+OversA=$("#overs-A").val();
+$("#overs-A").val("");
+OversB=$("#overs-B").val();
+$("#overs-B").val("");
+RXBA=$("#rXB-A").val();
+$("#rXB-A").val("");
+RXBB=$("#rXB-B").val();
+$("#rXB-B").val("");
+back=$("#back").val();
+$("#back").val("");
+lay=$("#lay").val(); 
+$("#lay").val("");
+document.getElementById("FavTeam").innerHTML=FavTeam;
+document.getElementById("RXBTeam").innerHTML=RXBTeam;
+document.getElementById("Point-A").innerHTML=PointA;
+document.getElementById("Point-B").innerHTML=PointB;
+document.getElementById("Overs-A").innerHTML=OversA;
+document.getElementById("Overs-B").innerHTML=OversB;
+document.getElementById("RXB-A").innerHTML=RXBA;
+document.getElementById("RXB-B").innerHTML=RXBB;
+document.getElementById("Back").innerHTML=back;
+document.getElementById("Lay").innerHTML=lay;
+//alert(FavTeam+" "+RXBTeam+" "+PointA+" "+PointB+" "+OversA+" "+OversB+" "+RXBA+" "+RXBB+" "+back+" "+lay);
+
+
+jsonData={
+"matchId":matchID,
+"FavTeam":FavTeam,
+ "RXBTeam":RXBTeam,
+"PointA":PointA,
+"PointB":PointB,
+"OversA":OversA,
+"OversB":OversB,
+"RXBA":RXBA,
+"RXBB":RXBB,
+"back":back,
+"lay":lay 
+
+};
+
+//document.write(JSON.stringify(jsonData));
+$.ajax(
+
+
+{
+
+
+url:"http://criczz.us-east-2.elasticbeanstalk.com/criczz/back-lay",
+    type:'POST',
+    contentType:'application/json',
+    dataType:'json',
+    data:JSON.stringify(jsonData),
+    success:function(result){
+    console.log(result);
+
+    },
+    error:function (result,thrownError,xhr) {
+        // body...
+        alert("Back Lay Submit "+xhr);
+    }
+
+
+}
+
+
+    );
+
+
+});
+
+
+
+ 
+});
+
+ 
+
+ 
+
+ 
+
+</script>
+
+ 
+
+</body></html>
+
+ 

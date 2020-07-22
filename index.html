@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stock Crickz Admin</title>
+    <link href="./vendor/nunito.css" rel="stylesheet">
+    <link rel="stylesheet" href="./styles/styles.css">
+    <link rel="stylesheet" href="./styles/loader.css">
+
+    
+</head>
+
+<body>
+	<img  src="./assets/logo.png" alt="Logo"  />
+	 
+	<div class="container">
+        <div class="loader">Loading...</div>
+
+	<div class="loginDiv">
+		<div style="display: flex;justify-content: flex-start;"><label for="uName">User Name</label> <input type="text" id="uName" required="true" autocomplete="off"></div>
+		<div style="display: flex;justify-content: flex-start; margin-top: 30px"><label for="pwd">Password</label><input type="password" id="pwd" required="true" autocomplete="off"></div>
+		
+		<input type="button" id="but"  class="button" name="submit" value="SUBMIT">
+		
+	</div>
+</div>
+
+   </body>
+
+<script src="./vendor/jquery.min.js"></script>
+
+<script>
+$(document).ready(function(){
+
+	 $("#but").click(function(){
+    	$(".loader").show();
+var uname="";
+
+uname=$('#uName').val();
+var pwd="";
+pwd=$('#pwd').val();
+var jsondata="";
+
+if(uname==""||pwd=="")
+    {
+
+        alert("User Name Or Password Empty");
+    $(".loader").hide();
+
+    }
+
+    else
+    {
+
+jsondata={
+"userName":uname,
+"password":pwd
+
+};
+
+    	 $.ajax({
+    	 	url: "http://criczz.us-east-2.elasticbeanstalk.com/criczz/login",
+            type:'POST',
+    contentType:'application/json',
+    dataType:'json',
+    data:JSON.stringify(jsondata),
+    	 	 success: function(result){
+   
+    $(".loader").hide();
+    var status=result.desc;
+    console.log(status);
+    if(status=="SUCCESS")
+    {
+document.location="http://localhost/Livemat/homeScreen.html";
+    
+    localStorage.setItem("name", $('#uName').val());
+
+    }
+    else
+    {
+alert("Wrong User Name");
+
+    }
+    
+  },
+    error:function(thrownError)
+  {
+
+    alert(thrownError);
+  }
+});
+ } });
+});
+</script>
+
+</html>

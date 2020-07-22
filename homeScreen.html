@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stock Crickz Admin</title>
+    <link href="./vendor/nunito.css" rel="stylesheet">
+    <link rel="stylesheet" href="./styles/styles.css">
+    
+</head>
+
+<body>
+<div id="uname" style="text-align: center;color: white;font-weight: 200;font-size: x-large;"> </div>
+
+	<div class="logout" id="logOut">Logout </div>
+		<img src="./assets/logo.png" alt="Logo"  style="padding-top: 100px;padding-left: 60px" />
+
+
+
+	<div class="sidenav">
+  <a href="http://localhost/Livemat/LiveMatchAdmin.html">Live</a>
+  <a href="http://localhost/stock-criczz-master/history.html">History</a>
+  <a href="http://localhost/Livemat/userDetails.html">Customer</a>
+  
+    </div>
+	
+   </body>
+
+<script src="./vendor/jquery.min.js"></script>
+<script type="text/javascript">
+	$(document).ready(function()
+	{
+		var uname=localStorage.getItem("name");
+if(uname=="")
+{
+
+	document.location="http://localhost/Livemat/index.html";
+}
+
+
+$('#logOut').click(function()
+{
+localStorage.setItem("name","");
+document.location="http://localhost/Livemat/index.html";
+});
+
+
+		document.getElementById("uname").innerHTML=localStorage.getItem("name")+" Logged";
+	});
+</script>
+</html>

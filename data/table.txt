@@ -1,0 +1,22 @@
+{
+   "userDetails":[
+      {
+         "name":"Punith",
+         "matchID":"111",
+         "matchName":"CSK & RCB",
+         "amountinBal":"1000",
+         "currentAmount":"500",
+         "Win":"200",
+         "Loss":"500"
+      },
+      {
+         "name":"Santhosh",
+         "matchID":"111",
+         "matchName":"CSK & RCB",
+         "amountinBal":"10000",
+         "currentAmount":"5000",
+         "Win":"2000",
+         "Loss":"7000"
+      }
+   ]
+}

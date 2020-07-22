@@ -1,0 +1,11 @@
+{
+	"matchId":"001",
+	"battingTname":" Killfest",
+	"bowlingTname":" Victory",
+	"bowlArray":["Shami","Logesh Kumar","irFan Pathan","Mohammed Askar","Pollard"],
+	"batArray": ["Rohit Sharma","KL Rahul","Raina","Rayudu","Jadav","MS Dhoni","R Jadeja","R Ashwin","M Shami","A Nehra","J Bumrah"],
+        "catchArray":["Shami","Loges","irFan Pathan","Mohammed Askar","Pollard"],
+"teamArun":10         
+          
+
+}
