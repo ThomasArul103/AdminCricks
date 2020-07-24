@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+ 
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Stock Crickz Admin</title>
+
+    <link href="./vendor/nunito.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="./styles/style.css">
+    <link rel="stylesheet" href="./styles/styles.css">
+
+  
+
+ 
+
+<style>
+
+ 
+
+</style>   
+
+ <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+</head>
+
+ 
+
+<body >
+
+ 
+    <div class="logout" id="logOut">Logout </div>
+    
+<div style="display:flex;justify-content:center;color:white;margin:10px;text-shadow: 1px 1px red;font-size: large;">Back Lay</div>
+
+<div style="display:flex;justify-content:flex-start;color:white;margin:20px;text-shadow: 1px 1px red;font-size: large;">
+<div style="margin:10px;margin-top: 10px">Match ID - </div><div style="margin:10;margin-top: 10px" id="matchId"></div>
+<div style="margin-left:50px;margin-top: 10px">Teams - </div><div style="margin:10px;margin-top: 10px" id="teamName"></div>
+
+</div>
+
+<div style="display: flex;justify-content: center;border:2px ">
+                <div class="matchBox" style="display: flex;justify-content: space-around;background-color: black;color: white;width: 90%"; >
+                  <div  style="width: 45%;margin: 10px;border-right: 2px solid white">
+<h3>Book Maker</h3>
+       <input type="checkbox" value="" id="teamA" name="BM">  <label id="LabelA"
+       style="margin-left: 2px"></label>
+        <input type="checkbox" value="" id="teamB" name="BM">
+         <label id="LabelB" style="margin-left: 2px"></label>
+        
+        <br>
+</div>
+
+            <div  style="width: 45%;margin: 10px;">
+<h3>FANCY</h3>
+        <label><input type="checkbox" value="FOW" name="FY"> Fall Of Wickets</label>
+        <label><input type="checkbox" value="FSTW" name="FY"> 1st Wicket</label>
+        <label><input type="checkbox" value="OR" name="FY"> 3 Over Runs</label>
+        <br>
+      <button id="bookMaker" type="button" style="width:150px">Get Values</button>  
+</div>
+     </div>
+
+
+</div>
+ <div></div>
+<div class="dynamicGenerate">
+</div>
+               
+
+
+</body>
+<script type="text/javascript">
+  
+$(document).ready(function()
+  {
+
+  let str = window.location.href;
+    let ID = str.substr(str.lastIndexOf("=")+1,str.lastIndexOf("/"));
+    console.log(ID);
+var split=ID.split("|");
+console.log(split[0]+" "+split[1]);
+var FavTeam,RXBTeam,PointA,PointB,OversA,OversB,RXBA,RXBB,back,lay;
+var betCard='';
+var teams=split[1]+"    vs    "+split[2];
+$("#matchId").text(split[0]);
+$("#teamName").text(teams);
+$("#matchId").val(split[0]);
+
+//$("#teamA").text(split[1]);
+$("#teamA").val(split[1]);
+//$("#teamA").css("color", "red");
+
+$("#teamB").val(split[2]);
+$("#LabelA").text(split[1]);
+$("#LabelB").text(split[2]);
+
+//document.getElementById("teamA").value=split[1];
+
+var bookMaker=[];
+var fancy=[];
+
+alert($("#teamA").text()+" "+
+$("#teamA").val()
+);
+
+
+//
+  $("#bookMaker").click(function(){
+          
+            $.each($("input[name='BM']:checked"), function(){
+                bookMaker.push($(this).val());
+            });
+            alert("Book Makers are: " + bookMaker.join(", "));
+            //var favorite = [];
+            $.each($("input[name='FY']:checked"), function(){
+                fancy.push($(this).val());
+            });
+            alert("Fancy Options are are: " + fancy.join(", "));
+        
+betCard=`<div class="betTopBox">
+<div class="betInsideBox">
+<div class="bookMakerBox">
+`;
+
+bookMaker.forEach(val=>{
+
+//alert(val);
+
+});
+
+betCard+=`
+</div>
+
+</div>
+</div>
+`;
+
+$('.dynamicGenerate').html(betCard);
+
+
+
+        });
+
+
+
+
+
+//logout
+$('#logOut').click(function()
+{
+localStorage.setItem("name","");
+document.location="http://localhost/Livemat/index.html";
+});
+
+
+
+});
+</script>
+
+ 
+
+</html>
+

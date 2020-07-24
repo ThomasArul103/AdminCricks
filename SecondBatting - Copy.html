@@ -1008,7 +1008,7 @@ battingAname=batValues[0];
 battingBname=batValues[1];
 teamAName=result.data.battingTname,teamBName=result.data.bowlingTname;
 teamArun=parseInt(result.data.teamArun);
-reqRuns=teamArun;
+reqRuns=teamArun+1;
 rRR=((reqRuns/reqBalls)*6).toPrecision(3);
 document.getElementById("matchID").innerHTML=matchID;
 document.getElementById("teamAName").innerHTML="Batting--> "+teamAName;
@@ -1260,6 +1260,50 @@ document.getElementById("Back").innerHTML=back;
 document.getElementById("Lay").innerHTML=lay;
 //alert(FavTeam+" "+RXBTeam+" "+PointA+" "+PointB+" "+OversA+" "+OversB+" "+RXBA+" "+RXBB+" "+back+" "+lay);
 
+jsonData={
+"matchId":matchID,
+"FavTeam":FavTeam,
+ "RXBTeam":RXBTeam,
+"PointA":PointA,
+"PointB":PointB,
+"OversA":OversA,
+"OversB":OversB,
+"RXBA":RXBA,
+"RXBB":RXBB,
+"back":back,
+"lay":lay 
+
+};
+
+//document.write(JSON.stringify(jsonData));
+$.ajax(
+
+
+{
+
+
+url:"http://criczz.us-east-2.elasticbeanstalk.com/criczz/back-lay",
+    type:'POST',
+    contentType:'application/json',
+    dataType:'json',
+    data:JSON.stringify(jsonData),
+    success:function(result){
+    console.log(result);
+
+    },
+    error:function (result,thrownError,xhr) {
+        // body...
+        alert("Back Lay Submit "+xhr);
+    }
+
+
+}
+
+
+    );
+
+
+
 });
 
 
@@ -1318,7 +1362,8 @@ temp=String(overs)+"."+String(ballsOver);
 var returnBowl=[];
 var returnBat=[];
 bowValues.forEach(val=>{
-returnBowl.push(document.getElementById(val).innerHTML,document.getElementById(val+"wk").innerHTML);
+returnBowl.push([String(document.getElementById(val+"o").innerHTML),String(document.getElementById(val+"m").innerHTML),String(document.getElementById(val+"run").innerHTML),String(document.getElementById(val+"wk").innerHTML),String(document.getElementById(val+"avg").innerHTML)]);
+
 
 }
 
@@ -1327,7 +1372,7 @@ returnBowl.push(document.getElementById(val).innerHTML,document.getElementById(v
 
 
 batValues.forEach(val=>{
-returnBat.push(document.getElementById(val).innerHTML,document.getElementById(val+"run").innerHTML);
+returnBat.push([String(document.getElementById(val).innerHTML),String(document.getElementById(val+"run").innerHTML),String(document.getElementById(val+"ball").innerHTML),String(document.getElementById(val+"SR").innerHTML),String(document.getElementById(val+"4").innerHTML),String(document.getElementById(val+"6").innerHTML),String(document.getElementById(val+"bowl").innerHTML),String(document.getElementById(val+"C").innerHTML)]);
 
 });
 
@@ -1512,8 +1557,7 @@ if(ballsCount==12)
 
 balls=balls.slice(1);
 
-balls[ballsCount]=" "+batASplit;
-
+balls[ballsCount]="WK";
  
 
 }
@@ -1524,8 +1568,7 @@ else
 
 {
 
-balls[ballsCount]=" "+batASplit;
-
+balls[ballsCount]="WK";
 ballsCount=ballsCount+1;
 
 }
@@ -1615,7 +1658,7 @@ if(wkDetailsA=="")
 
 {
 
-wkDetailsA=String(totalRuns)+"-"+String(wickets)+"-"+String(overs)+"."+String(ballsOver);
+wkDetailsA=String(totalRuns)+"-"+String(wickets)+"|"+String(overs)+"."+String(ballsOver);
 
  
 
@@ -1629,7 +1672,7 @@ else
 
 //wkDetailsA=String(totalRuns)+"-"+String(wickets);
 
-wkDetailsA=wkDetailsA+", "+String(totalRuns)+"-"+String(wickets)+"-"+String(overs)+"."+String(ballsOver);
+wkDetailsA=wkDetailsA+", "+String(totalRuns)+"-"+String(wickets)+"|"+String(overs)+"."+String(ballsOver);
 
 }
 
@@ -1665,7 +1708,7 @@ document.getElementById(battingAname+"ball").innerHTML=batABall;
 
 document.getElementById(battingAname+"SR").innerHTML=batASR.toPrecision(3);
 
-lastWK="Last wkt : "+String(battingAname)+" "+String(batA)+"("+String(batABall)+")";
+lastWK=String(battingAname)+" "+String(batA)+"("+String(batABall)+")";
 //alert(lastWK);
 
 document.getElementById(battingAname).innerHTML=battingAname;
@@ -1836,7 +1879,7 @@ if(ballsCount==12)
 
 balls=balls.slice(1);
 
-balls[ballsCount]=" "+batASplit;
+balls[ballsCount]="WI";
 
  
 
@@ -1848,7 +1891,7 @@ else
 
 {
 
-balls[ballsCount]=" "+batASplit;
+balls[ballsCount]="WI";
 
 ballsCount=ballsCount+1;
 
@@ -2019,7 +2062,7 @@ if(ballsCount==12)
 
 balls=balls.slice(1);
 
-balls[ballsCount]=" "+batASplit;
+balls[ballsCount]="NB";
 
  
 
@@ -2031,7 +2074,7 @@ else
 
 {
 
-balls[ballsCount]=" "+batASplit;
+balls[ballsCount]="NB";
 
 ballsCount=ballsCount+1;
 
@@ -2165,7 +2208,7 @@ if(ballsCount==12)
 
 balls=balls.slice(1);
 
-balls[ballsCount]=" "+batASplit;
+balls[ballsCount]=batAString[1];
 
  
 
@@ -2177,7 +2220,7 @@ else
 
 {
 
-balls[ballsCount]=" "+batASplit;
+balls[ballsCount]=batAString[1];
 
 ballsCount=ballsCount+1;
 
@@ -2784,8 +2827,7 @@ if(ballsCount==12)
 
 balls=balls.slice(1);
 
-balls[ballsCount]=" "+batBSplit;
-
+balls[ballsCount]="WK";
  
 
 }
@@ -2796,8 +2838,7 @@ else
 
 {
 
-balls[ballsCount]=" "+batBSplit;
-
+balls[ballsCount]="WK";
 ballsCount=ballsCount+1;
 
 }
@@ -2921,7 +2962,7 @@ if(wkDetailsA=="")
 
 {
 
-wkDetailsA=String(totalRuns)+"-"+String(wickets)+"-"+String(overs)+"."+String(ballsOver);
+wkDetailsA=String(totalRuns)+"-"+String(wickets)+"|"+String(overs)+"."+String(ballsOver);
 
  
 
@@ -2935,7 +2976,7 @@ else
 
 //wkDetailsA=String(totalRuns)+"-"+String(wickets);
 
-wkDetailsA=wkDetailsA+", "+String(totalRuns)+"-"+String(wickets)+"-"+String(overs)+"."+String(ballsOver);
+wkDetailsA=wkDetailsA+", "+String(totalRuns)+"-"+String(wickets)+"|"+String(overs)+"."+String(ballsOver);
 
 }
 
@@ -2973,7 +3014,7 @@ else
 batSelect=batSelect+1;
 }
 
-lastWK="Last wkt : "+String(battingBname)+" "+String(batB)+"("+String(batBBall)+")";
+lastWK=String(battingBname)+" "+String(batB)+"("+String(batBBall)+")";
 //alert(lastWK);
 
 document.getElementById(battingBname).innerHTML=battingBname;
@@ -3132,7 +3173,7 @@ if(ballsCount==12)
 
 balls=balls.slice(1);
 
-balls[ballsCount]=" "+batBSplit;
+balls[ballsCount]="WI";
 
  
 
@@ -3144,7 +3185,7 @@ else
 
 {
 
-balls[ballsCount]=" "+batBSplit;
+balls[ballsCount]="WI";
 
 ballsCount=ballsCount+1;
 
@@ -3288,7 +3329,7 @@ if(ballsCount==12)
 
 balls=balls.slice(1);
 
-balls[ballsCount]=" "+batBSplit;
+balls[ballsCount]="NB";
 
  
 
@@ -3300,7 +3341,7 @@ else
 
 {
 
-balls[ballsCount]=" "+batBSplit;
+balls[ballsCount]="NB";
 
 ballsCount=ballsCount+1;
 
@@ -3435,7 +3476,7 @@ if(ballsCount==12)
 
 balls=balls.slice(1);
 
-balls[ballsCount]=" "+batBSplit;
+balls[ballsCount]=batBString[1];
 
  
 
@@ -3447,7 +3488,7 @@ else
 
 {
 
-balls[ballsCount]=" "+batBSplit;
+balls[ballsCount]=batBString[1];
 
 ballsCount=ballsCount+1;
 
@@ -3998,6 +4039,8 @@ currentBBat=document.getElementById("batB").innerHTML;
 
 // Bowler Div store + bWK,bOver,Run variables
 
+bowlArray=[];
+batArray=[];
 
 
 
@@ -4018,6 +4061,9 @@ batValues.forEach(val=>{
 batArray.push([String(document.getElementById(val).innerHTML),String(document.getElementById(val+"run").innerHTML),String(document.getElementById(val+"ball").innerHTML),String(document.getElementById(val+"SR").innerHTML),String(document.getElementById(val+"4").innerHTML),String(document.getElementById(val+"6").innerHTML),String(document.getElementById(val+"bowl").innerHTML),String(document.getElementById(val+"C").innerHTML)]);
 
 });
+var bbOver=bOver+"."+ballsOver;
+cRR=(totalRuns*6)/((overs*6)+ballsOver);
+
 
 Average=parseFloat((Run/(bOver+"."+ballsOver))).toPrecision(3);
 jsonData={
@@ -4030,6 +4076,7 @@ jsonData={
           "teamArun":teamArun,
           "reqBalls":reqBalls,
           "reqRuns":reqRuns,
+          "cRR":cRR,
           "rRR":rRR,
           "batABall":batABall,
           "batASR":batASR,
@@ -4056,7 +4103,7 @@ jsonData={
           "extraTotal":extraTotal,
           "totalExtras":totalExtras,
           "bWK":bWK,
-          "bOver":bOver,
+          "bOver":bbOver,
           "Run":Run,
           "ER":Average,
           "bowlArray":bowlArray,
@@ -4088,6 +4135,8 @@ $.ajax({
          alert("In submit data "+thrownError);
     }
 });
+
+
 
 
 
@@ -4188,7 +4237,7 @@ batA=result.batA;
 batABall=result.batABall;
 batASR=result.batASR;
 batB=result.batB;
-batBall=result.batBBall;
+batBBall=result.batBBall;
 batBSR=result.batBSR;
 partnership=result.partnership;
 partnershipRuns=result.partnershipRuns;
@@ -4210,7 +4259,7 @@ Run=parseInt(result.Run);
 bowlArray=result.bowlArray;
 batArray=result.batArray;
 teamArun=result.teamArun;
-reqRuns=teamArun;
+reqRuns=result.reqRuns;
 reqBalls=result.reqBalls;
 rRR=((reqRuns/reqBalls)*6).toPrecision(3);
 wkDetailsA=result.wkDetailsA;

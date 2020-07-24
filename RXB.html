@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+ 
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Stock Crickz Admin</title>
+
+    <link href="./vendor/nunito.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="./styles/style.css">
+    <link rel="stylesheet" href="./styles/styles.css">
+
+  
+
+ 
+
+<style>
+
+ 
+
+div:hover
+
+{
+
+opacity: 1;
+
+}
+
+.matchBox{
+
+ 
+
+    background-color: white;
+
+    width: 60%;
+
+position: relative;
+
+    left: 20%;
+
+border-radius: 25px;
+
+opacity: 0.7;
+
+margin-botton:20px;
+
+ 
+
+}
+
+ 
+
+a:link, a:visited {
+
+  background-color: #f44336;
+
+  color: white;
+
+  padding: 14px 25px;
+
+  text-align: center;
+
+  text-decoration: none;
+
+  display: inline-block;
+
+border-radius: 10px;
+
+}
+
+a:hover, a:active {
+
+  background-color: grey;
+
+}
+
+</style>   
+
+ <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+</head>
+
+ 
+
+<body >
+
+ 
+    <div class="logout" id="logOut">Logout </div>
+    
+<div style="display:flex;justify-content:center;color:white;margin:10px;text-shadow: 1px 1px red;font-size: large;"><div>Enter RXB values
+</div></div>
+
+
+<div style="display:flex;justify-content:flex-start;color:white;margin:20px;text-shadow: 1px 1px red;font-size: large;">
+<div style="margin:10px;margin-top: 10px">Match ID - </div><div style="margin:10;margin-top: 10px" id="matchId"></div>
+<div style="margin-left:50px;margin-top: 10px">Teams - </div><div style="margin:10px;margin-top: 10px" id="teamName"></div>
+
+</div>
+
+
+
+
+<!--   Back And Lay -->
+<div style="display: flex;justify-content: center;margin: 30px; width: 90%font-size:x-large !important;">
+    <div style="border-radius: 5px;background-color:black;width: 100%;margin-left: 20px;height: auto;">
+
+<div id="" style="text-align: center;font-size: x-large;margin-top: 10px;color: white">Back And Lay </div>
+        
+<div style="display: flex;justify-content: space-around;;margin-top: 10px">
+    <div  style="display: flex;flex-basis: calc(17%);font-weight: bold;color: red;font-size: large;justify-content: center;">Fav Team</div>
+ <div  style="display: flex;flex-basis: calc(17%);font-weight: bold;color: red;font-size: large;justify-content: center">RXB Team</div>
+ <div  style="display: flex;flex-basis: calc(20%);font-weight: bold;color: red;font-size: large;justify-content: center">Point-A</div>
+ <div  style="display: flex;flex-basis: calc(20%);font-weight: bold;color: red;font-size: large;justify-content: center">Point-B</div>
+ <div  style="display: flex;flex-basis: calc(15%);font-weight: bold;color: red;font-size: large;justify-content: center">Overs-A</div>
+
+
+</div>
+<div style="display: flex;justify-content: space-around;;margin-top: 10px">
+    <input id="fTeam" type="text" style="display: flex;flex-basis: calc(17%);color: black;height: 10px;width: 30px"></input>
+ <input id="rXBTeam" type="text" style="display: flex;flex-basis: calc(17%);color: black;height: 10px;width: 30px"></input>
+ <input id="point-A" type="text" style="display: flex;flex-basis: calc(17%);color: black;height: 10px;width: 30px"></input>
+ <input id="point-B" type="text" style="display: flex;flex-basis: calc(17%);color: black;height: 10px;width: 30px"></input>
+ 
+<input id="overs-A" type="text" style="display: flex;flex-basis: calc(17%);color: black;height: 10px;width: 30px"></input>
+ 
+</div>
+<div style="display: flex;justify-content: space-around;;margin-top: 10px">
+    <div id="FavTeam" style="display: flex;flex-basis: calc(17%);font-weight: bold;color: white;font-size: large
+;justify-content: center;"></div>
+ <div  id="RXBTeam" style="display: flex;flex-basis: calc(17%);font-weight: bold;color: white;font-size: large
+;justify-content: center"></div>
+ <div id="Point-A" style="display: flex;flex-basis: calc(20%);font-weight: bold;color: white;font-size: large
+;justify-content: center"></div>
+ <div id="Point-B" style="display: flex;flex-basis: calc(20%);font-weight: bold;color: white;font-size: large
+;justify-content: center"></div>
+<div id="Overs-A" style="display: flex;flex-basis: calc(15%);font-weight: bold;color: white;font-size: large
+;justify-content: center"></div>
+
+
+</div>
+
+
+
+
+<div style="display: flex;justify-content: space-around;;margin-top: 10px">
+    <div  style="display: flex;flex-basis: calc(17%);font-weight: bold;color: red;font-size: large;justify-content: center;">Overs-B</div>
+ <div  style="display: flex;flex-basis: calc(17%);font-weight: bold;color: red;font-size: large;justify-content: center">RXB-A</div>
+ <div  style="display: flex;flex-basis: calc(20%);font-weight: bold;color: red;font-size: large;justify-content: center">RXB-B</div>
+ <div  style="display: flex;flex-basis: calc(20%);font-weight: bold;color: red;font-size: large;justify-content: center">Back</div>
+<div  style="display: flex;flex-basis: calc(15%);font-weight: bold;color: red;font-size: large;justify-content: center">Lay</div>
+
+
+</div>
+<div style="display: flex;justify-content: space-around;;margin-top: 10px">
+    <input id="overs-B" type="text" style="display: flex;flex-basis: calc(17%);color: black;height: 10px;width: 30px"></input>
+ <input id="rXB-A" type="text" style="display: flex;flex-basis: calc(17%);color: black;height: 10px;width: 30px"></input>
+ <input id="rXB-B" type="text" style="display: flex;flex-basis: calc(17%);color: black;height: 10px;width: 30px"></input>
+ <input id="back" type="text" style="display: flex;flex-basis: calc(17%);color: black;height: 10px;width: 30px"></input>
+ <input id="lay" type="text" style="display: flex;flex-basis: calc(17%);color: black;height: 10px;width: 30px"></input>
+ 
+
+
+</div>
+<div style="display: flex;justify-content: space-around;;margin-top: 10px">
+    <div id="Overs-B" style="display: flex;flex-basis: calc(17%);font-weight: bold;color: white;font-size: large
+;justify-content: center;"></div>
+ <div id="RXB-A" style="display: flex;flex-basis: calc(17%);font-weight: bold;color: white;font-size: large
+;justify-content: center"></div>
+ <div id="RXB-B" style="display: flex;flex-basis: calc(20%);font-weight: bold;color: white;font-size: large
+;justify-content: center"></div>
+ <div id="Back" style="display: flex;flex-basis: calc(20%);font-weight: bold;color: white;font-size: large
+;justify-content: center"></div>
+<div id="Lay" style="display: flex;flex-basis: calc(15%);font-weight: bold;color: white;font-size: large
+;justify-content: center"></div>
+
+
+</div>
+
+<div style="display: flex;justify-content: center;margin-top: 10px;margin-bottom: 25px">
+<button id="teamBBLSubmit" style="background-color: white;color: black;width:20%">Submit</button>
+</div>
+<hr>
+
+</div>
+<!--   Back And Lay End-->
+
+
+
+
+ 
+
+               
+
+<script type="text/javascript">
+  
+$(document).ready(
+ 
+  function()
+  {
+// back lay submit
+  let str = window.location.href;
+    let ID = str.substr(str.lastIndexOf("=")+1,str.lastIndexOf("/"));
+    console.log(ID);
+var split=ID.split("|");
+console.log(split[0]+" "+split[1]+" "+split[2]);
+var FavTeam,RXBTeam,PointA,PointB,OversA,OversB,RXBA,RXBB,back,lay;
+var teams="";
+$("#matchId").text(split[0]);
+
+teams=split[1]+"    vs    "+split[2];
+$("#teamName").text(teams);
+
+
+$("#teamBBLSubmit").click(function()
+ {
+
+
+FavTeam=$("#fTeam").val();
+$("#fTeam").val("");
+ RXBTeam=$("#rXBTeam").val();
+ $("#rXBTeam").val("");
+PointA=$("#point-A").val();
+$("#point-A").val("");
+PointB=$("#point-B").val();
+$("#point-B").val("");
+OversA=$("#overs-A").val();
+$("#overs-A").val("");
+OversB=$("#overs-B").val();
+$("#overs-B").val("");
+RXBA=$("#rXB-A").val();
+$("#rXB-A").val("");
+RXBB=$("#rXB-B").val();
+$("#rXB-B").val("");
+back=$("#back").val();
+$("#back").val("");
+lay=$("#lay").val(); 
+$("#lay").val("");
+document.getElementById("FavTeam").innerHTML=FavTeam;
+document.getElementById("RXBTeam").innerHTML=RXBTeam;
+document.getElementById("Point-A").innerHTML=PointA;
+document.getElementById("Point-B").innerHTML=PointB;
+document.getElementById("Overs-A").innerHTML=OversA;
+document.getElementById("Overs-B").innerHTML=OversB;
+document.getElementById("RXB-A").innerHTML=RXBA;
+document.getElementById("RXB-B").innerHTML=RXBB;
+document.getElementById("Back").innerHTML=back;
+document.getElementById("Lay").innerHTML=lay;
+//alert(FavTeam+" "+RXBTeam+" "+PointA+" "+PointB+" "+OversA+" "+OversB+" "+RXBA+" "+RXBB+" "+back+" "+lay);
+
+
+jsonData={
+"matchId":split[0],
+"FavTeam":FavTeam,
+ "RXBTeam":RXBTeam,
+"PointA":PointA,
+"PointB":PointB,
+"OversA":OversA,
+"OversB":OversB,
+"RXBA":RXBA,
+"RXBB":RXBB,
+"back":back,
+"lay":lay 
+
+};
+
+//document.write(JSON.stringify(jsonData));
+$.ajax(
+{
+
+
+url:"http://criczz.us-east-2.elasticbeanstalk.com/criczz/back-lay",
+    type:'POST',
+    contentType:'application/json',
+    dataType:'json',
+    data:JSON.stringify(jsonData),
+    success:function(result){
+    console.log(result);
+
+    },
+    error:function (result,thrownError,xhr) {
+        // body...
+        alert("Back Lay Submit "+xhr);
+    }
+
+
+}
+
+
+    );
+
+
+});
+
+//logout
+$('#logOut').click(function()
+{
+localStorage.setItem("name","");
+document.location="http://localhost/Livemat/index.html";
+});
+
+
+
+});
+</script>
+
+</body>
+
+ 
+
+</html>
+

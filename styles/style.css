@@ -13,9 +13,46 @@ height:100%;
  
 
  
- 
 
 }
+
+
+.betTopBox{
+
+  display: flex;
+  justify-content: center;
+  border:2px;
+
+
+}
+
+.betInsideBox
+{
+
+  display: flex;
+  justify-content: space-around;
+  background-color: black;
+  color: white;
+  width: 90%;
+
+
+
+}
+
+.bookMakerBox{
+  width: 45%;
+  margin: 10px;
+  border-right: 2px solid white;
+  
+
+}
+
+.fancyBox{
+ width: 45%;
+ margin: 10px; 
+}
+
+
 
 .lName
 {
