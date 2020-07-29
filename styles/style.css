@@ -30,7 +30,7 @@ height:100%;
 {
 
   display: flex;
-  justify-content: space-around;
+  justify-content: flex-start;
   background-color: black;
   color: white;
   width: 90%;
@@ -40,12 +40,36 @@ height:100%;
 }
 
 .bookMakerBox{
-  width: 45%;
+  width: 15%;
   margin: 10px;
   border-right: 2px solid white;
   
 
 }
+
+.centerDiv
+{
+
+align-content: center;
+margin-top: 10px;
+margin-right: 10px;
+
+}
+.textbox
+{
+
+  width:35px;
+  height: 20px;
+}
+
+.innerBook{
+ display: flex;
+  justify-content: space-around;
+   
+}
+
+
+
 
 .fancyBox{
  width: 45%;

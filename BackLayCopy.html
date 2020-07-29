@@ -50,8 +50,8 @@
 
 </div>
 
-<div style="display: flex;justify-content: center;border:2px ">
-                <div class="matchBox" style="display: flex;justify-content: space-around;background-color: black;color: white;width: 90%"; >
+<div style="display: flex;justify-content: center;border:2px; ">
+                <div class="matchBox" style="display: flex;border-bottom: 2px solid white;justify-content: space-around;background-color: black;color: white;width: 90%"; >
                   <div  style="width: 45%;margin: 10px;border-right: 2px solid white">
 <h3>Match ODDS</h3>
        <input type="checkbox" value="" id="teamA" name="BM">  <label id="LabelA"
@@ -77,11 +77,34 @@
 
 
 </div>
- <div></div>
+ <div> </div>
 <div class="dynamicGenerate">
 </div>
                
+<div class="betTopBox">
+<div class="betInsideBox">
+<div class="bookMakerBox">
+<h3>Match ODDS</h3>
 
+<div class="innerBook">
+
+  <div class="centerDiv"><div>TCK</div></div><div><input class="textbox" type="text" name="" ></div><div><input class="textbox"  type="text" name=""></div>
+</div>
+
+<div class="innerBook">
+
+  <div class="centerDiv"><div>PD</div></div><div><input class="textbox" type="text" name="" ></div><div><input class="textbox"  type="text" name=""></div>
+</div>
+
+
+
+</div>
+
+
+
+<!-- End bet box-->
+</div>
+</div>
 
 </body>
 <script type="text/javascript">
@@ -127,13 +150,13 @@ $("#teamA").val()
 
 
             });
-            alert("Book Makers are: " + bookMaker.join(", "));
+            console.log("Book Makers are: " + bookMaker.join(", "));
             //var favorite = [];
             $.each($("input[name='FY']:checked"), function(){
                 fancy.push($(this).val());
-                alert($(this).val()+" "+$(this).text());
+                console.log($(this).val()+" "+$(this).text());
             });
-            alert("Fancy Options are are: " + fancy.join(", "));
+            console.log("Fancy Options are are: " + fancy.join(", "));
         
 betCard=`<div class="betTopBox">
 <div class="betInsideBox">
